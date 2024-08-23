@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bảo Tuyết Mobile</title><link rel="icon" type="image/x-icon" href="ảnh/logotitle.svg">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Header hau.css'>
+    <link rel="stylesheet" href="section.css"/>
+    <link rel='stylesheet' type='text/css' media='screen' href="Header.css">
+    <link rel='stylesheet' type='text/css' media='screen' href="Header1.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link src="css/bootstrap.min.css"></link>
+    <script src="js.txt"></script>
+     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Main.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="js/bootstrap.min.js"></script>
+    <link src="css/bootstrap.min.css"></link>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href="Header.css">
+	<link rel='stylesheet' type='text/css' media='screen' href="Header1.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <style>
+    
+      /*Layout từng thiết bị---------------------------------------------------------------*/
+     @media (min-width: 992px) {
+  .col-xl-5ths {
+    width: 20%;
+    float: left;
+  }
+  }
+  @media (max-width: 992px) {
+  .col-lg-3 {
+    width: 25%;
+    float: left;
+  }
+  }
+  @media (max-width: 768px) {
+  .col-md-4 {
+    width: 50%;
+    float: left;
+  }
+  }
+  @media (max-width: 576px) {
+  .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  }
+  @media (max-width: 320px) {
+  .col-6 {
+    width: 100%;
+    float: left;
+  }
+  }
+  /*Layout từng thiết bị---------------------------------------------------------------*/
+    </style>
+  </head>
+<body>
+  
+  <header>
+    <nav style="margin-top: -20px; background-color: #ffff;" class="navbar navbar-expand-xxl">
+      <div class="container">
+        <a  class="navbar-brand" href="Trang chủ.html"
+          ><img style="max-width: 150px;" src="ảnh/logo.baotuyet.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <form style="display: flex; margin-left: 10px;">
+            <div class="dropdowntimkiem">
+              <input
+                type="text"
+                placeholder="Nhập tên sản phẩm"
+                id="myInputtimkiem"
+                onkeyup="filterFunctiontimkiem()"
+              />
+              <button
+                onclick="myFunctiontimkiem()"
+                class="dropbtntimkiem"
+                onmouseout="hideDropdowntimkiem()"
+              >
+                <i class="fa fa-search"></i>
+              </button>
+
+              <div id="myDropdowntimkiem" class="dropdown-contenttimkiem">
+                <a href="Lọc Ipad.html"><span>IPAD</span></a>
+                <a href="Lọc Iphone.html">IPHONE</a>
+                <a href="Lọc Phukien.html">Củ sạc</a>
+                <a href="Lọc Phukien.html">Dây sạc</a>
+                <a href="Lọc Phukien.html">Tai nghe</a>
+                <a href="Lọc Iphone.html">Apple</a>
+                <a href="Lọc Phukien.html">Airpods</a>
+                <a href="ip 15 1B.html">IPHONE 15 PRO</a>
+                <a href="ip14.html">IPHONE 14 PRO</a>
+                <a href="ip13 256G.html">IPHONE 13 PRO</a>
+                <a href="ip 15 1B.html">IPHONE 15</a>
+                <a href="ip14.html">IPHONE 14</a>
+                <a href="ip13.html">IPHONE 13</a>
+                <div
+                  class="nosptimkiem"
+                  id="noResultstimkiem"
+                  style="display: none"
+                >
+                  Không tìm thấy sản phẩm phù hợp.
+                </div>
+              </div>
+            </div>
+          </form>
+          <ul class="navbar-nav" style="float: left;">
+            <li class="nav-item" style="margin-left: -720px;">
+              <a class="kieuchuheader" href="Trang chủ.html"
+                ><img
+                  src="Images/home.svg"
+                  height="22px"
+                  style="margin-left: 20px;"
+                /><br />TRANG CHỦ</a
+              >
+            </li>
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="kieuchuheader" href="Lọc Iphone.html"
+                ><img
+                  style="margin-left: 10px"
+                  src="Images/apple.svg"
+                  height="22px"
+                /><br />IPHONE</a
+              >
+              <ul class="submenu">
+                <div class="col1">
+                  <li>
+                    <a href="Lọc Iphone.html">IPhone 15 Series</a>
+                    <!-- <ul class="col1">
+                  <li><a href="#">IPhone 15 ProMax</a></li>
+                  <li><a href="#">IPhone 15 Pro</a></li>
+                  <li><a href="#">IPhone 15 Plus</a></li>
+                  <li><a href="#">IPhone 15</a></li>
+                </ul>-->
+                  </li>
+                  <li><a href="ip14.html">IPhone 14 Series</a></li>
+                  <li><a href="ip13 256G.html">IPhone 13 Series</a></li>
+                  <li><a href="ip12.html">IPhone 12 Series</a></li>
+                  <li><a href="ip11 256G.html">IPhone 11 Series</a></li>
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="kieuchuheader" href="Lọc Ipad.html"
+                ><img
+                  src="Images/tablet.svg"
+                  height="22px"
+                  style="margin-left: 10px"
+                /><br />
+                &ensp;IPAD</a
+              >
+              <ul class="submenu">
+                <div class="col1">
+                  <li><a href="ipad2.html">Ipad Pro</a></li>
+                  <li><a href="ipad4.html">Ipad AIR</a></li>
+                  <li><a href="ipad5.html">Ipad Gen</a></li>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="kieuchuheader" href="Lọc Phukien.html">
+                <img
+                  src="Images/smartwatch.svg"
+                  height="22px"
+                  style="margin: 5px 28px auto"
+                /><br />PHỤ KIỆN
+              </a>
+            </li>
+            <li class="nav-item"  style="margin-left: 20px;">
+              <a
+                href="#"
+                class="kieuchuheader"
+                href="đăng kí đăng nhập.html"
+                target="_top"
+                ><img
+                  src="Images/person-circle.svg"
+                  height="22px"
+                  style="margin: 5px 38px auto"
+                /><br />ĐĂNG NHẬP</a
+              >
+            </li>
+            <li class="nav-item"  style="margin-left: 30px;"> <div class="dropdowncartgiohang">
+              <button onclick="myFunction()" class="dropbtncartgiohang" style="border: #f1f1f1;background-color: white;"><i class="fa-solid fa-cart-shopping"></i></button>
+              <div id="myDropdowncartgiohang" class="dropdown-contentcartgiohang">
+               <div id="cart">
+                <h2>Giỏ hàng của bạn</h2>
+                <ul id="cart-items"></ul>
+                <div id="cart-total">
+                  Tổng tiền: <span id="cart-total-price">0₫</span>
+                </div>
+                <button id="clear-cart-btn"><a href="Trang chủ.html">Xóa giỏ hàng</a></button>
+                <button class="thanhtoancart"><a href="ThanhToan.html">Thanh toán</a></button>
+              </div>
+              
+              </div></li>
+            <li class="nav-item"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section style="margin-top: 120px">
+  </section>
+  <!--hau-->
+  <div class="container-form">
+    <a href="MainChinh.html" alt="Trang chủ">Trang chủ - </a><a href="#">Trang chuyên mục - </a><a href="DatHang.html">Đặt hàng qua Facebbok</a></br>
+    <h3>ĐẶT HÀNG QUA FACEBOOK</h3></br>
+    <i><p>Ngày đăng: 13:36:28 27-09-2017</p></i></br>
+<p style="color:red;"><b><i>1. Thủ tục:</i></b></p>
+</br>
+Duyệt hồ sơ nhanh gọn :
+</br>
+Với khoản vay trên 6.5 triệu đồng khách hàng cần:
+</br>
+-      - CMND (Bản sao)
+</br>
+-      - Hộ khẩu (Nguyên 16 trang, bản sao)
+</br>
+- Với khoản vay dưới 6.5 triệu đồng: 
+</br>
+-      - CMND (Bản sao)
+</br>
+-       - Bằng lái xe (Bản sao)
+</br>
+- Lưu ý : Quý khách hàng đem theo bản gốc để đối chiếu . 
+</br>
+- Nhân viên hỗ trợ tư vấn từ 9h đến 21h30 tại 18 Tây sơn - Đống Đa -Hà Nội 
+</br>
+    Hotline: 0984.34.34.69-0937.114.666
+</br>
+ (các ngày trong tuần). 
+</br></br>
+<p style="color:red;"><b><i>2. Quyền lợi của khách hàng mua trả góp:</i></b></p>
+</br>
+- Thủ tục đơn giản, giải quyết nhanh, nhận sản phẩm ngay.
+</br>
+- Tuỳ chọn mức đóng phí, tuỳ chọn thời hạn đóng phí.
+</br>
+- Thanh toán trả chậm, không cần chứng minh tài chính, không cần thế chấp tài sản.
+</br>
+</br>
+
+<p style="color:red;"><b><i>3. Lưu ý Một số quy định sau đối với khách hàng mua trả góp:</i></b></p>
+</br>
+           - Tuổi từ 20 - 55 tuổi, có năng lực hành vi dân sự đầy đủ
+        </br>
+           - Là người ký tên trên hợp đồng vay và nộp phí đến hạn.
+        </br>
+           - Là công dân Việt Nam, có hộ khẩu tại các tỉnh thành sau:
+        </br></br>
+<p style="color:red;"><b><i>4. Thanh toán : </i></b></p>
+</br>
+Khách hàng có thể thanh toán trả góp hàng tháng qua các ngân hàng : 
+</br>
+1-Ngân hàng Vietinbank- Chi Nhánh Hà Thành
+</br>
+Số TK : 101010004802412
+</br>
+Chủ tài khoản: Ngô Xuân Hòa
+</br>
+ 
+
+2-Ngân hàng Agribank - Chi Nhánh Bắc Hà Nội
+</br>
+Số TK : 1440205338550
+</br>
+Chủ tài khoản: Ngô Xuân Hòa
+</br>
+3-Ngân hàng Vietcombank - Chi Nhánh Thành Công
+</br>
+Số TK : 0451000217840
+</br>
+Chủ tài khoản: Ngô Xuân Hòa
+</br>
+4-Ngân hàng Maritimebank - Chi Nhánh Hà Thành
+</br>
+Số TK : 03101015108134
+</br>
+Chủ tài khoản: Ngô Xuân Hòa
+</br>
+5-Ngân hàng Teckcombank - Chi Nhánh Hà Thành
+</br>
+Số TK : 19027419081015
+</br>
+Chủ tài khoản: Ngô Xuân Hòa
+</br>
+Mọi chi tiết vui lòng liên hệ:
+</br>
+HỆ THỐNG BÁN HÀNG BẢO TUYẾT MOBILE
+</br>
+Địa chỉ: 18 Tây sơn - Đống Đa -Hà Nội (Đối diện cây xăng Nam Đồng)
+</br>
+Hotline: 0984.34.34.69-0937.114.666</br>
+<img src="Images/tags-fill.svg" alt="Tag">Tag:
+</div></br></br>
+
+<!-- footer------------------------------------------------------------------------------------------------------------>
+      <footer>
+        <div class="footer container-fluid" style="padding:0px;">
+          <div class="footer-top ">
+            <div class="row">
+              <div class="col-xl-4 col-lg-4 col-sm-4 margin-bottom-30">
+                <h4 class="footer-title-top">Giới thiệu</h4>
+                <div class="footer-content-top">
+                  <p><strong>Bảo Tuyết Mobile</strong></p>
+                  <p>Cửa hàng bán lẻ điện thoại di động, smartphone, iPad, laptop, phụ kiện chính hãng, giá tốt nhất. Kèm theo nhiều khuyến mãi hấp dẫn.</p>
+                  <p><strong>Hotline:</strong> <a href="">0984343469</a></p>
+                  <p><strong>Địa chỉ:</strong> 18 Tây Sơn, Quận Đống Đa, Hà Nội</p>
+                </div>
+              </div>
+      
+              <div class="col-xl-4 col-lg-4 col-sm-4 margin-bottom-30">
+                <h4 class="footer-title-top">Liên hệ</h4>
+                <div class="footer-content-top">
+                  <p><strong>Tư vấn bán hàng và hỗ trợ trả góp</strong> <b style="color:red;">0984.3434.69</b> <br>(8h00 - 22h00)</p>
+                  <span>-----------------------------------------------------------</span>
+                  <p><strong>Hỗ trợ kỹ thuật:</strong> 0915.92.6606 <br> (9h30-12h30; 14h-18h30)</p>
+                </div>
+              </div>
+      
+              <div class="col-xl-4 col-lg-4 col-sm-4 margin-bottom-30">
+                <h4 class="footer-title-top">Dịch vụ</h4>
+                <div class="footer-content-top">
+                  <div class="ratio ratio-16x9">
+                    <iframe style="border-radius: 10px;" width="560" height="315" src="https://www.youtube.com/embed/KQsPqwJxsi0?si=MWMkoh38pbshoB3N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="footer-bottom">
+            
+              <div class="row">
+                <div class="col-lg-3 p-2" >
+                  <h4 class="footer-title-bot" style="margin-top:0px;">Công Ty</h4>
+                  <div class="footer-content-bot">
+                    <span>Công ty TNHH Thương Mại Quốc Tế Bảo Tuyết</sp>
+                    <p>MST 0107755476 do Sở KH và ĐT TP Hà Nội cấp ngày 30/11/2022</p>
+                    <p>Địa chỉ: Tập thể xí nghiệp Sông Đà, X. Tân Triều, H. Thanh Trì, Tp. Hà Nội</p>
+                    <p>Hotline: <b style="color:red">0984343469</b></p>
+                    <span>Email: baotuyetmobile12345@gmail.com</span>
+                  </div>
+                </div>
+      
+                <div class="col-lg-3 p-2">
+                  <h4 class="footer-title-bot">Chính Sách Bán Hàng</h4>
+                  <ul class="footer-links" >
+                    <li><a href="BaoMatTT.html"><img src="Images/boltsl.svg">&nbsp;Chính sách bảo mật thông tin</a></li>
+                    <li><a href="XulyKNai.html"><img src="Images/boltsl.svg">&nbsp;Chính sách xử lý khiếu nại</a></li>
+                    <li><a href="KiemHang.html"><img src="Images/boltsl.svg">&nbsp;Chính sách kiểm hàng</a></li>
+                    <li><a href="VanChuyen.html"><img src="Images/boltsl.svg">&nbsp;Chính sách vận chuyển</a></li>
+                    <li><a href="DoiTra.html"><img src="Images/boltsl.svg">&nbsp;Chính sách đổi trả</a></li>
+                    <li><a href="ThanhToan.html"><img src="Images/boltsl.svg">&nbsp;Chính sách thanh toán</a></li>
+                  </ul>
+                </div>
+      
+                <div class="col-lg-3 p-2 ">
+                  <h4 class="footer-title-bot">Hướng Dẫn</h4>
+                  <ul class="footer-links">
+                    <li><a href="MuaHangTX.html"><img src="Images/boltsl.svg">&nbsp;Hướng dẫn mua hàng từ xa</a></li>
+                    <li><a href="DatHang.html"><img src="Images/boltsl.svg">&nbsp;Đặt hàng qua Facebook</a></li>
+                  </ul>
+                  <div class="payment">
+                    <h4 class="footer-titlex">Phương thức thanh toán</h4>
+                    <a href="ThanhToan.html"><img src="Images/thanhtoan.png" alt="Phương thức thanh toán" height="auto"></a>
+                  </div>
+                </div>
+      
+                <div class="col-lg-3 p-3 " style="margin-bottom:115px;">
+                  <h4 class="footer-title-bot">Giới thiệu</h4>
+                  <ul class="footer-links">
+                    <li><a href="GioiThieu.html"><img src="Images/boltsl.svg">&nbsp;Giới thiệu</a></li>
+                    <li><a href="#"><img src="Images/boltsl.svg">&nbsp;Sản phẩm</a></li>
+                    <li><a href="#"><img src="Images/boltsl.svg">&nbsp;Khuyến Mãi</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </footer>
+<script src="section.js"></script>
+</body>
+</html>

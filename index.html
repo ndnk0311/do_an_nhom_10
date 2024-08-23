@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bảo Tuyết Mobile</title><link rel="icon" type="image/x-icon" href="ảnh/logotitle.svg">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Header hau.css'>
+    <link rel="stylesheet" href="section.css"/>
+  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <style>
+      /*Layout từng thiết bị---------------------------------------------------------------*/
+     @media (min-width: 992px) {
+  .col-xl-5ths {
+    width: 20%;
+    float: left;
+  }
+  }
+  @media (max-width: 992px) {
+  .col-lg-3 {
+    width: 25%;
+    float: left;
+  }
+  }
+  @media (max-width: 768px) {
+  .col-md-4 {
+    width: 50%;
+    float: left;
+  }
+  }
+  @media (max-width: 576px) {
+  .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  }
+  @media (max-width: 320px) {
+  .col-6 {
+    width: 100%;
+    float: left;
+  }
+  }
+  /*Layout từng thiết bị---------------------------------------------------------------*/
+
+    </style>
+  </head>
+<body>
+  
+  <header>
+    <nav style="margin-top: -20px; background-color: #ffff;" class="navbar navbar-expand-xxl">
+      <div class="container">
+        <a  class="navbar-brand" href="Trang chủ.html"
+          ><img style="max-width: 150px;" src="ảnh/logo.baotuyet.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <form style="display: flex; margin-left: 10px;">
+            <div class="dropdowntimkiem">
+              <input
+                type="text"
+                placeholder="Nhập tên sản phẩm"
+                id="myInputtimkiem"
+                onkeyup="filterFunctiontimkiem()"
+              />
+              <button
+                onclick="myFunctiontimkiem()"
+                class="dropbtntimkiem"
+                onmouseout="hideDropdowntimkiem()"
+              >
+                <i class="fa fa-search"></i>
+              </button>
+
+              <div id="myDropdowntimkiem" class="dropdown-contenttimkiem">
+                <a href="Lọc Ipad.html"><span>IPAD</span></a>
+                <a href="Lọc Iphone.html">IPHONE</a>
+                <a href="Lọc Phukien.html">Củ sạc</a>
+                <a href="Lọc Phukien.html">Dây sạc</a>
+                <a href="Lọc Phukien.html">Tai nghe</a>
+                <a href="Lọc Iphone.html">Apple</a>
+                <a href="Lọc Phukien.html">Airpods</a>
+                <a href="ip 15 1B.html">IPHONE 15 PRO</a>
+                <a href="ip14.html">IPHONE 14 PRO</a>
+                <a href="ip13 256G.html">IPHONE 13 PRO</a>
+                <a href="ip 15 1B.html">IPHONE 15</a>
+                <a href="ip14.html">IPHONE 14</a>
+                <a href="ip13.html">IPHONE 13</a>
+                <div
+                  class="nosptimkiem"
+                  id="noResultstimkiem"
+                  style="display: none"
+                >
+                  Không tìm thấy sản phẩm phù hợp.
+                </div>
+              </div>
+            </div>
+          </form>
+          <ul class="navbar-nav" style="float: left;">
+            <li class="nav-item" style="margin-left: -720px;">
+              <a class="kieuchuheader" href="Trang chủ.html"
+                ><img
+                  src="Images/home.svg"
+                  height="22px"
+                  style="margin-left: 20px;"
+                /><br />TRANG CHỦ</a
+              >
+            </li>
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="kieuchuheader" href="Lọc Iphone.html"
+                ><img
+                  style="margin-left: 10px"
+                  src="Images/apple.svg"
+                  height="22px"
+                /><br />IPHONE</a
+              >
+              <ul class="submenu">
+                <div class="col1">
+                  <li>
+                    <a href="Lọc Iphone.html">IPhone 15 Series</a>
+                    <!-- <ul class="col1">
+                  <li><a href="#">IPhone 15 ProMax</a></li>
+                  <li><a href="#">IPhone 15 Pro</a></li>
+                  <li><a href="#">IPhone 15 Plus</a></li>
+                  <li><a href="#">IPhone 15</a></li>
+                </ul>-->
+                  </li>
+                  <li><a href="ip14.html">IPhone 14 Series</a></li>
+                  <li><a href="ip13 256G.html">IPhone 13 Series</a></li>
+                  <li><a href="ip12.html">IPhone 12 Series</a></li>
+                  <li><a href="ip11 256G.html">IPhone 11 Series</a></li>
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="kieuchuheader" href="Lọc Ipad.html"
+                ><img
+                  src="Images/tablet.svg"
+                  height="22px"
+                  style="margin-left: 10px"
+                /><br />
+                &ensp;IPAD</a
+              >
+              <ul class="submenu">
+                <div class="col1">
+                  <li><a href="ipad2.html">Ipad Pro</a></li>
+                  <li><a href="ipad4.html">Ipad AIR</a></li>
+                  <li><a href="ipad5.html">Ipad Gen</a></li>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="kieuchuheader" href="Lọc Phukien.html">
+                <img
+                  src="Images/smartwatch.svg"
+                  height="22px"
+                  style="margin: 5px 28px auto"
+                /><br />PHỤ KIỆN
+              </a>
+            </li>
+            <li class="nav-item"  style="margin-left: 20px;">
+              <a
+                href="đăng kí đăng nhập.html"
+                class="kieuchuheader"
+               
+                ><img
+                  src="Images/person-circle.svg"
+                  height="22px"
+                  style="margin: 5px 38px auto"
+                /><br />ĐĂNG NHẬP</a
+              >
+            </li>
+            <li class="nav-item"  style="margin-left: 30px;"> <div class="dropdowncartgiohang">
+              <button onclick="myFunction()" class="dropbtncartgiohang" style="border: #f1f1f1;background-color: white;"><i class="fa-solid fa-cart-shopping"></i></button>
+              <div id="myDropdowncartgiohang" class="dropdown-contentcartgiohang">
+               <div id="cart">
+                <h2>Giỏ hàng của bạn</h2>
+                <ul id="cart-items"></ul>
+                <div id="cart-total">
+                  Tổng tiền: <span id="cart-total-price">0₫</span>
+                </div>
+                <button id="clear-cart-btn"><a href="Trang chủ.html">Xóa giỏ hàng</a></button>
+                <button class="thanhtoancart"><a href="ThanhToan.html">Thanh toán</a></button>
+              </div>
+              
+              </div></li>
+            <li class="nav-item"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div style="margin-top: 90px;" class="container-fluid">
+    <div style="margin: 0 auto;"><a href="Tất cả sản phẩm.html"><img style="width: 100%;" src="Images/bt3.jpg"></a></div>
+  </div>
+  <div id="notification-container"></div>
+      <div class="banner-block-select; margin-top:100px">
+        <div class="block-tilte">
+          <h4 style="font-size: 60px;">Bảo Tuyết Moblie</h4>
+          <p class="block-title-p">“Trung tâm Smartphone chính hãng tốt nhất”</p>
+        </div>
+      </div>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-6">
+              <div class="flip-box" >
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img
+                      style="max-width: 250px; max-height: 250px"
+                      src="images/font-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flip-box-back">
+                    <p style="color:crimson"><b>Mua hàng trả góp 0đ</b></p>
+                    <p>Chỉ cần CCDD & Bằng lái xe hoặc Sổ hộ khẩu. Không câng chứng minh thu nhập. Lãi suất thấp. Duyệt hồ sơ nhanh chóng trong 5 phút sau khi hoàn thiện.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-6">
+              <div class="flip-box" >
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img
+                      style="max-width: 250px; max-height: 250px"
+                      src="images/font-2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flip-box-back">
+                    <p style="color:crimson"><b>Sản phẩm bán chạy tại Bảo Tuyết Mobile</b></p>
+                    <p>Hỗ trợ trả góp lãi suất 0% dành cho thẻ Sacombank
+                    Giảm 50% tất cả sản phẩm hot<br>
+                    Tặng miếng dán màn hình trọn đời<br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-6">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img
+                      style="max-width: 250px; max-height: 250px"
+                      src="images/font-3.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flip-box-back">
+                    <p style="color:crimson"><b>Gói quà tặng hấp dẫn</b></p>
+                    <p>Hỗ trợ trả góp lãi suất 0% dành cho thẻ Sacombank
+                      Tặng bình đựng nước chính hãng<br>
+                      Tặng miếng dán màn hình trọn đời<br>
+                      </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container mt-3">
+          <div class="row m-3">
+      <!------------------Khung sp 1------------------------------------------------------------->
+            <div class="container w-100 mt-3" style="border-radius: 20px;background-color:coral; padding-bottom: 40px;">
+              <div class="container-fluid h1iphone mt-3 hoversp" style="width: 100%;text-align: center;" ><a class="hoversp" href="Lọc Iphone.html" style="font-size: 60px; text-decoration: none;">MUA IPHONE TRẢ GÓP <a style="color: yellow;font-size: 80px;">0%</a></a></div>
+              <div class="container mt-1 mb-3"><a href="Lọc Iphone.html">
+                <img class="mt-3 mb-3" style="width: 100%; border-radius: 10px; margin: 0 auto; float: left;" src="Images/banner ip.jpg" alt="ảnh ipad"/> 
+              </a></div>
+              <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1 ">
+                <div class="card">
+                  <img
+                    class="p-3 anhsp"
+                    src="https://img.upanh.tv/2024/04/12/iphone1.jpg"
+                alt="iphone1.jpg"
+                  />
+                  <div class="card-body">
+                    <a href="ip15-526gb.html" class="lienket">
+                      <p class="tensp">
+                        IPHONE 15 PRO 256GB VN/A MỚI 100% BẢO HÀNH 12 THÁNG 
+                      </p>
+      
+                      <del class="giagiam">23.668.000₫ </del>
+                      <span class="giasp">22.668.000₫</span>
+                    </a>
+                    <p class="khuyenmai">
+                      Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                      đạp, sản phẩm Apple, sản phẩm giá sốc)
+                    </p>
+                    <!----------------------5 sao----------------------------------------------------------->
+                    <div id="rating" style="margin-top: -10px;">
+                      <input type="radio" id="star5" name="rating" value="5" />
+                      <label
+                        class="full"
+                        for="star5"
+                        title="Awesome - 5 stars"
+                      ></label>
+      
+                      <input type="radio" id="star4" name="rating" value="4" />
+                      <label
+                        class="full"
+                        for="star4"
+                        title="Pretty good - 4 stars"
+                      ></label>
+      
+                      <input type="radio" id="star3" name="rating" value="3" />
+                      <label
+                        class="full"
+                        for="star3"
+                        title="Meh - 3 stars"
+                      ></label>
+      
+                      <input type="radio" id="star2" name="rating" value="2" />
+                      <label
+                        class="full"
+                        for="star2"
+                        title="Kinda bad - 2 stars"
+                      ></label>
+      
+                      <input type="radio" id="star1" name="rating" value="1" />
+                      <label
+                        class="full"
+                        for="star1"
+                        title="Sucks big time - 1 star"
+                      ></label>
+                    </div>
+                    <!--0 đánh giá-->
+                    <span class="danhgia0"
+                    >
+                      0 đánh giá</span
+                    >
+                    <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                    <button
+              class="add-to-cart-btn buttoncart them-vao-gio-hang"
+              data-product-name="IPHONE 15 PRO 256GB VN/A"
+              data-product-price="22668000"
+              data-product-image="https://img.upanh.tv/2024/04/12/iphone1.jpg"
+            >
+              Mua ngay
+            </button>
+                  </div>
+                </div>
+              </div>
+              <!--SP gốc-------------------------------------------------------------->
+              <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+                <div class="card">
+                  <img
+                    class="p-3 anhsp"
+                    src="https://img.upanh.tv/2024/04/12/iphone2.jpg"
+                alt="iphone2.jpg"
+                  />
+                  <div class="card-body">
+                    <a href="ip15-526gb.html" class="lienket">
+                      <p class="tensp">
+                        IPHONE 15 PROMAX 512GB VN/A MỚI 100% BẢO HÀNH 12 THÁNG 
+                      </p>
+      
+                      <del class="giagiam">35.968.000₫</del>
+                      <span class="giasp">33.968.000₫</span>
+                    </a>
+                    <p class="khuyenmai">
+                      Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                      đạp, sản phẩm Apple, sản phẩm giá sốc)
+                    </p>
+                    <!----------------------5 sao----------------------------------------------------------->
+                    <div id="rating">
+                      <input type="radio" id="star5" name="rating" value="5" />
+                      <label
+                        class="full"
+                        for="star5"
+                        title="Awesome - 5 stars"
+                      ></label>
+      
+                      <input type="radio" id="star4" name="rating" value="4" />
+                      <label
+                        class="full"
+                        for="star4"
+                        title="Pretty good - 4 stars"
+                      ></label>
+      
+                      <input type="radio" id="star3" name="rating" value="3" />
+                      <label
+                        class="full"
+                        for="star3"
+                        title="Meh - 3 stars"
+                      ></label>
+      
+                      <input type="radio" id="star2" name="rating" value="2" />
+                      <label
+                        class="full"
+                        for="star2"
+                        title="Kinda bad - 2 stars"
+                      ></label>
+      
+                      <input type="radio" id="star1" name="rating" value="1" />
+                      <label
+                        class="full"
+                        for="star1"
+                        title="Sucks big time - 1 star"
+                      ></label>
+                    </div>
+                    <!--0 đánh giá-->
+                    <span
+                    class="danhgia0"
+                    >
+                      0 đánh giá</span
+                    >
+                    <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                    <button
+                    class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                    data-product-name="IPHONE 15 PROMAX 512GB VN/A"
+                    data-product-price="33968000"
+                    data-product-image="https://img.upanh.tv/2024/04/12/iphone2.jpg"
+                  >
+                    Mua ngay
+                  </button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+                <div class="card">
+                  <img
+                    class="p-3 anhsp"
+                    src="https://img.upanh.tv/2024/04/12/iphone3.jpg"
+                alt="iphone3.jpg"
+                  />
+                  <div class="card-body">
+                    <a href="ip15.html" class="lienket">
+                      <p class="tensp">
+                        IPHONE 15 PLUS 256GB VN/A MỚI 100% BẢO HÀNH 12 THÁNG 
+                      </p>
+      
+                      <del class="giagiam">26.000.000₫ </del>
+                      <span class="giasp">25.868.000₫</span>
+                    </a>
+                    <p class="khuyenmai">
+                      Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                      đạp, sản phẩm Apple, sản phẩm giá sốc)
+                    </p>
+                    <!----------------------5 sao----------------------------------------------------------->
+                    <div id="rating">
+                      <input type="radio" id="star5" name="rating" value="5" />
+                      <label
+                        class="full"
+                        for="star5"
+                        title="Awesome - 5 stars"
+                      ></label>
+      
+                      <input type="radio" id="star4" name="rating" value="4" />
+                      <label
+                        class="full"
+                        for="star4"
+                        title="Pretty good - 4 stars"
+                      ></label>
+      
+                      <input type="radio" id="star3" name="rating" value="3" />
+                      <label
+                        class="full"
+                        for="star3"
+                        title="Meh - 3 stars"
+                      ></label>
+      
+                      <input type="radio" id="star2" name="rating" value="2" />
+                      <label
+                        class="full"
+                        for="star2"
+                        title="Kinda bad - 2 stars"
+                      ></label>
+      
+                      <input type="radio" id="star1" name="rating" value="1" />
+                      <label
+                        class="full"
+                        for="star1"
+                        title="Sucks big time - 1 star"
+                      ></label>
+                    </div>
+                    <!--0 đánh giá-->
+                    <span
+                    class="danhgia0"
+                    >
+                      0 đánh giá</span
+                    >
+                    <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                    <button
+              class="add-to-cart-btn buttoncart them-vao-gio-hang"
+              data-product-name="IPHONE 15 PLUS 256GB VN/A "
+              data-product-price="25868000"
+              data-product-image="https://img.upanh.tv/2024/04/12/iphone3.jpg"
+            >
+              Mua ngay
+            </button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+                <div class="card">
+                  <img
+                    class="p-3 anhsp"
+                    <img src="https://img.upanh.tv/2024/05/06/iphone-4.jpg" alt="iphone-4.jpg" border="0">
+                  <div class="card-body">
+                    <a href="IP14 256GB.html" class="lienket">
+                      <p class="tensp">
+                        IPHONE 14 PRO 256GB VN/A MỚI 100% BẢO HÀNH 12 THÁNG 
+                      </p>
+      
+                      <del class="giagiam">20.668.000₫ </del>
+                      <span class="giasp">18.968.000₫</span>
+                    </a>
+                    <p class="khuyenmai">
+                      Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                      đạp, sản phẩm Apple, sản phẩm giá sốc)
+                    </p>
+                    <!----------------------5 sao----------------------------------------------------------->
+                    <div id="rating">
+                      <input type="radio" id="star5" name="rating" value="5" />
+                      <label
+                        class="full"
+                        for="star5"
+                        title="Awesome - 5 stars"
+                      ></label>
+      
+                      <input type="radio" id="star4" name="rating" value="4" />
+                      <label
+                        class="full"
+                        for="star4"
+                        title="Pretty good - 4 stars"
+                      ></label>
+      
+                      <input type="radio" id="star3" name="rating" value="3" />
+                      <label
+                        class="full"
+                        for="star3"
+                        title="Meh - 3 stars"
+                      ></label>
+      
+                      <input type="radio" id="star2" name="rating" value="2" />
+                      <label
+                        class="full"
+                        for="star2"
+                        title="Kinda bad - 2 stars"
+                      ></label>
+      
+                      <input type="radio" id="star1" name="rating" value="1" />
+                      <label
+                        class="full"
+                        for="star1"
+                        title="Sucks big time - 1 star"
+                      ></label>
+                    </div>
+                    <!--0 đánh giá-->
+                    <span
+                    class="danhgia0"
+                    >
+                      0 đánh giá</span
+                    >
+                    <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                    <button
+                    class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                    data-product-name="IPHONE 14 PRO 256GB VN/A "
+                    data-product-price="18968000"
+                    data-product-image="https://img.upanh.tv/2024/05/06/iphone-4.jpg"
+                  >
+                    Mua ngay
+                  </button>
+                  </div>
+                </div>
+              </div>
+              <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+                <div class="card">
+                  <img
+                    class="p-3 anhsp"
+                    src="https://img.upanh.tv/2024/04/12/iphone5.jpg"
+                alt="iphone5.jpg"
+                  />
+                  <div class="card-body">
+                    <a href="IP13 512G.html" class="lienket">
+                      <p class="tensp">
+                        IPHONE 13 PRO 512GB VN/A MỚI 100% BẢO HÀNH 12 THÁNG 
+                      </p>
+      
+                      <del class="giagiam">20.968.000₫</del>
+                      <span class="giasp">19.968.000₫</span>
+                    </a>
+                    <p class="khuyenmai">
+                      Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                      đạp, sản phẩm Apple, sản phẩm giá sốc)
+                    </p>
+                    <!----------------------5 sao----------------------------------------------------------->
+                    <div id="rating">
+                      <input type="radio" id="star5" name="rating" value="5" />
+                      <label
+                        class="full"
+                        for="star5"
+                        title="Awesome - 5 stars"
+                      ></label>
+      
+                      <input type="radio" id="star4" name="rating" value="4" />
+                      <label
+                        class="full"
+                        for="star4"
+                        title="Pretty good - 4 stars"
+                      ></label>
+      
+                      <input type="radio" id="star3" name="rating" value="3" />
+                      <label
+                        class="full"
+                        for="star3"
+                        title="Meh - 3 stars"
+                      ></label>
+      
+                      <input type="radio" id="star2" name="rating" value="2" />
+                      <label
+                        class="full"
+                        for="star2"
+                        title="Kinda bad - 2 stars"
+                      ></label>
+      
+                      <input type="radio" id="star1" name="rating" value="1" />
+                      <label
+                        class="full"
+                        for="star1"
+                        title="Sucks big time - 1 star"
+                      ></label>
+                    </div>
+                    <!--0 đánh giá-->
+                    <span
+                    class="danhgia0"
+                    >
+                      0 đánh giá</span
+                    >
+                    <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                    <button
+                    class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                    data-product-name=" IPHONE 13 PRO 512GB VN/A"
+                    data-product-price="19968000"
+                    data-product-image="https://img.upanh.tv/2024/04/12/iphone5.jpg"
+                  >
+                    Mua ngay
+                  </button>
+                  </div>
+                </div>
+              </div>
+             
+               
+      
+            <!--khung-->
+          </div>
+      <!------------------END Khung sp 1------------------------------------------------------------->
+      <!------------------Khung sp 2------------------------------------------------------------->
+         <div class="container mt-5"><a href="Lọc Ipad.html">
+          <img style="width: 100%; border-radius: 20px; margin: 0 auto; float: left;" src="Images/ipadbanner.png" alt="ảnh ipad"/> 
+        </a></div>
+          <div class="container w-100 mt-5 mb-5" style="border-radius: 20px;background-color:gold; padding-bottom: 40px;">
+            <a class="lienket" href="Lọc Ipad.html"><div class="container-fluid h1iphone mt-3" style="width: 100%;text-align: center;" ><h1 style="font-size: 60px;">IPAD GIẢM GIÁ SỐC&ensp;<i style="color: red;" class="fa-solid fa-bolt"></i></h1></div></a>
+            <!--khung sp 1-->
+            <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+              <div class="card">
+                <img
+                  class="p-3 anhsp"
+                  src="https://img.upanh.tv/2024/04/12/ipad1.jpg"
+              alt="ipad1.jpg"
+                />
+                <div class="card-body">
+                  <a href="ipad1.html" class="lienket">
+                    <p class="tensp">
+                      IPAD GEN 10 64GB WIFI MỚI CHÍNH HÃNG
+                    </p>
+      
+                    <del class="giagiam">25.668.000₫ </del>
+                    <span class="giasp">22.968.000₫</span>
+                  </a>
+                  <p class="khuyenmai">
+                    Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                    đạp, sản phẩm Apple, sản phẩm giá sốc)
+                  </p>
+                  <!----------------------5 sao----------------------------------------------------------->
+                  <div id="rating" style="margin-top: -10px;">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label
+                      class="full"
+                      for="star5"
+                      title="Awesome - 5 stars"
+                    ></label>
+      
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label
+                      class="full"
+                      for="star4"
+                      title="Pretty good - 4 stars"
+                    ></label>
+      
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label
+                      class="full"
+                      for="star3"
+                      title="Meh - 3 stars"
+                    ></label>
+      
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label
+                      class="full"
+                      for="star2"
+                      title="Kinda bad - 2 stars"
+                    ></label>
+      
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label
+                      class="full"
+                      for="star1"
+                      title="Sucks big time - 1 star"
+                    ></label>
+                  </div>
+                  <!--0 đánh giá-->
+                  <span class="danhgia0"
+                  >
+                    0 đánh giá</span
+                  >
+                  <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                  <button
+                    class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                    data-product-name=" IPAD GEN 10 64GB WIFI "
+                    data-product-price="22968000"
+                    data-product-image="https://img.upanh.tv/2024/04/12/ipad1.jpg"
+                  >
+                    Mua ngay
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--SP gốc-------------------------------------------------------------->
+            <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+              <div class="card">
+                <img
+                  class="p-3 anhsp"
+                  src="https://img.upanh.tv/2024/04/12/ipad2.jpg"
+              alt="ipad2.jpg"
+                />
+                <div class="card-body">
+                  <a href="ipad3.html" class="lienket">
+                    <p class="tensp">
+                      IPAD PRO 9.7 512GB WIFI+4G MỚI 100%
+                    </p>
+      
+                    <del class="giagiam">33.999.000₫ </del>
+                    <span class="giasp">31.111.000₫ </span>
+                  </a>
+                  <p class="khuyenmai">
+                    Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                    đạp, sản phẩm Apple, sản phẩm giá sốc)
+                  </p>
+                  <!----------------------5 sao----------------------------------------------------------->
+                  <div id="rating">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label
+                      class="full"
+                      for="star5"
+                      title="Awesome - 5 stars"
+                    ></label>
+      
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label
+                      class="full"
+                      for="star4"
+                      title="Pretty good - 4 stars"
+                    ></label>
+      
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label
+                      class="full"
+                      for="star3"
+                      title="Meh - 3 stars"
+                    ></label>
+      
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label
+                      class="full"
+                      for="star2"
+                      title="Kinda bad - 2 stars"
+                    ></label>
+      
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label
+                      class="full"
+                      for="star1"
+                      title="Sucks big time - 1 star"
+                    ></label>
+                  </div>
+                  <!--0 đánh giá-->
+                  <span
+                  class="danhgia0"
+                  >
+                    0 đánh giá</span
+                  >
+                  <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                  <button
+                  class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                  data-product-name="IPAD PRO 9.7 512GB WIFI+4G"
+                  data-product-price="31111000"
+                  data-product-image="https://img.upanh.tv/2024/04/12/ipad2.jpg"
+                >
+                  Mua ngay
+                </button>
+                </div>
+              </div>
+            </div>
+      
+            <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+              <div class="card">
+                <img
+                  class="p-3 anhsp"
+                  src="https://img.upanh.tv/2024/04/12/ipad3.jpg"
+              alt="ipad3.jpg"
+                />
+                <div class="card-body">
+                  <a href="ipad2.html" class="lienket">
+                    <p class="tensp">
+                      APPLE IPAD PRO 9.7 - 64GB WIFI+4GB Bản Quốc Tế
+                    </p>
+      
+                    <del class="giagiam">16.999.000₫</del>
+                    <span class="giasp">12.888.000₫</span>
+                  </a>
+                  <p class="khuyenmai">
+                    Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                    đạp, sản phẩm Apple, sản phẩm giá sốc)
+                  </p>
+                  <!----------------------5 sao----------------------------------------------------------->
+                  <div id="rating">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label
+                      class="full"
+                      for="star5"
+                      title="Awesome - 5 stars"
+                    ></label>
+      
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label
+                      class="full"
+                      for="star4"
+                      title="Pretty good - 4 stars"
+                    ></label>
+      
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label
+                      class="full"
+                      for="star3"
+                      title="Meh - 3 stars"
+                    ></label>
+      
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label
+                      class="full"
+                      for="star2"
+                      title="Kinda bad - 2 stars"
+                    ></label>
+      
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label
+                      class="full"
+                      for="star1"
+                      title="Sucks big time - 1 star"
+                    ></label>
+                  </div>
+                  <!--0 đánh giá-->
+                  <span
+                  class="danhgia0"
+                  >
+                    0 đánh giá</span
+                  >
+                  <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                  <button
+                  class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                  data-product-name="IPAD PRO 9.7 - 64GB WIFI+2GB "
+                  data-product-price="12888000"
+                  data-product-image="https://img.upanh.tv/2024/04/12/iphone5.jpg"
+                >
+                  Mua ngay
+                </button>
+                </div>
+              </div>
+            </div>
+      
+            <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+              <div class="card">
+                <img
+                  class="p-3 anhsp"
+                  src="https://img.upanh.tv/2024/04/12/ipad4.jpg"
+                  alt="ipad4.jpg"
+                />
+                <div class="card-body">
+                  <a href="ipad4.html" class="lienket">
+                    <p class="tensp">
+                      IPAD AIR 9 2023 64GB WIFI + 5G VN/A MỚI CHÍNH HÃNG
+                    </p>
+      
+                    <del class="giagiam">19.999.000₫</del>
+                    <span class="giasp">9.999.999₫</span>
+                  </a>
+                  <p class="khuyenmai">
+                    Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                    đạp, sản phẩm Apple, sản phẩm giá sốc)
+                  </p>
+                  <!----------------------5 sao----------------------------------------------------------->
+                  <div id="rating">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label
+                      class="full"
+                      for="star5"
+                      title="Awesome - 5 stars"
+                    ></label>
+      
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label
+                      class="full"
+                      for="star4"
+                      title="Pretty good - 4 stars"
+                    ></label>
+      
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label
+                      class="full"
+                      for="star3"
+                      title="Meh - 3 stars"
+                    ></label>
+      
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label
+                      class="full"
+                      for="star2"
+                      title="Kinda bad - 2 stars"
+                    ></label>
+      
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label
+                      class="full"
+                      for="star1"
+                      title="Sucks big time - 1 star"
+                    ></label>
+                  </div>
+                  <!--0 đánh giá-->
+                  <span
+                  class="danhgia0"
+                  >
+                    0 đánh giá</span
+                  >
+                  <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                  <button
+                    class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                    data-product-name="IPAD AIR 9 2023 64GB WIFI + 5G "
+                    data-product-price="9999999"
+                    data-product-image="https://img.upanh.tv/2024/04/12/ipad4.jpg"
+                  >
+                    Mua ngay
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+              <div class="card">
+                <img
+                  class="p-3 anhsp"
+                  src="https://img.upanh.tv/2024/04/12/ipad5.jpg"
+                  alt="ipad5.jpg"
+                />
+                <div class="card-body">
+                  <a href="ipad5.html" class="lienket">
+                    <p class="tensp">
+                      IPAD GEN 9 2021 64GB WIFI + 5G MỚI CHÍNH HÃNG
+                    </p>
+      
+                    <del class="giagiam">13.668.000₫ </del>
+                    <span class="giasp">10.968.000₫</span>
+                  </a>
+                  <p class="khuyenmai">
+                    Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                    đạp, sản phẩm Apple, sản phẩm giá sốc)
+                  </p>
+                  <!----------------------5 sao----------------------------------------------------------->
+                  <div id="rating">
+                    <input type="radio" id="star5" name="rating" value="5" />
+                    <label
+                      class="full"
+                      for="star5"
+                      title="Awesome - 5 stars"
+                    ></label>
+      
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <label
+                      class="full"
+                      for="star4"
+                      title="Pretty good - 4 stars"
+                    ></label>
+      
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <label
+                      class="full"
+                      for="star3"
+                      title="Meh - 3 stars"
+                    ></label>
+      
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <label
+                      class="full"
+                      for="star2"
+                      title="Kinda bad - 2 stars"
+                    ></label>
+      
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <label
+                      class="full"
+                      for="star1"
+                      title="Sucks big time - 1 star"
+                    ></label>
+                  </div>
+                  <!--0 đánh giá-->
+                  <span
+                  class="danhgia0"
+                  >
+                    0 đánh giá</span
+                  >
+                  <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                  <button
+                    class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                    data-product-name="IPAD GEN 9 2021 64GB WIFI + 5G "
+                    data-product-price="10968000"
+                    data-product-image="https://img.upanh.tv/2024/04/12/ipad5.jpg"
+                  >
+                    Mua ngay
+                  </button>
+                </div>
+              </div>
+            </div>
+           
+             
+      
+          <!--khung-->
+        </div>
+        <!------------------END Khung sp 2------------------------------------------------------------->
+        <!------------------Khung sp 3------------------------------------------------------------->
+        <div class="container mt-5"><a href="Lọc Phukien.html">
+            <img style="width: 100%; border-radius: 10px; margin: 0 auto; float: left;" src="Images/bannergiaohang.png" alt="ảnh ipad"/> 
+          </a></div>
+        <div class="container w-100 mt-5 mb-5" style="border-radius: 20px;background-color:forestgreen; padding-bottom: 40px;">
+          
+          <a class="lienket" href="Lọc Phukien.html"><div class="container-fluid h1iphone mt-3 " style="width: 100%; color: #fff;text-align: center;" ><h1 class="hoversp">PHỤ KIỆN GIẢM SIÊU HỜI</h1></div></a>
+          <!--khung sp 1-->
+          <div class="container mt-3"><a href="Lọc Phukien.html">
+            <img class="mb-3" style="width: 100%; border-radius: 10px; margin: 0 auto; float: left;" src="Images/bannerphukien.png" alt="ảnh ipad"/> 
+          </a></div>
+          <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+            <div class="card">
+              <img
+                class="p-3 anhsp"
+                src="https://img.upanh.tv/2024/03/22/Phukien1.jpg"
+                alt="Phukien1.jpg"
+              />
+              <div class="card-body">
+                <a href="phukien5.html" class="lienket">
+                  <p class="tensp">
+                    Tai nghe Bluetooth Apple AirPods Pro 2 2023 USB-C
+                  </p>
+                  <span class="giasp">5.968.000₫</span>
+                </a>
+                <p class="khuyenmai">
+                  Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                  đạp, sản phẩm Apple, sản phẩm giá sốc)
+                </p>
+                <!----------------------5 sao----------------------------------------------------------->
+                <div id="rating" style="margin-top: -10px;">
+                  <input type="radio" id="star5" name="rating" value="5" />
+                  <label
+                    class="full"
+                    for="star5"
+                    title="Awesome - 5 stars"
+                  ></label>
+      
+                  <input type="radio" id="star4" name="rating" value="4" />
+                  <label
+                    class="full"
+                    for="star4"
+                    title="Pretty good - 4 stars"
+                  ></label>
+      
+                  <input type="radio" id="star3" name="rating" value="3" />
+                  <label
+                    class="full"
+                    for="star3"
+                    title="Meh - 3 stars"
+                  ></label>
+      
+                  <input type="radio" id="star2" name="rating" value="2" />
+                  <label
+                    class="full"
+                    for="star2"
+                    title="Kinda bad - 2 stars"
+                  ></label>
+      
+                  <input type="radio" id="star1" name="rating" value="1" />
+                  <label
+                    class="full"
+                    for="star1"
+                    title="Sucks big time - 1 star"
+                  ></label>
+                </div>
+                <!--0 đánh giá-->
+                <span class="danhgia0"
+                >
+                  0 đánh giá</span
+                >
+                <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                <button
+                class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                data-product-name="Apple AirPods Pro 2 2023 USB-C"
+                data-product-price="5968000"
+                data-product-image="https://img.upanh.tv/2024/03/22/Phukien1.jpg"
+              >
+                Mua ngay
+              </button>
+              </div>
+            </div>
+          </div>
+          <!--SP gốc-------------------------------------------------------------->
+          <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+            <div class="card">
+              <img
+                class="p-3 anhsp"
+                src="https://img.upanh.tv/2024/03/22/Phukien2.jpg"
+                alt="Phukien2.jpg"
+              />
+              <div class="card-body">
+                <a href="phukien2.html" class="lienket">
+                  <p class="tensp">
+                    Củ sạc 35W 2 Cổng TYPE C Chính hãng bảo hành 6 tháng
+                  </p>
+      
+                  <del class="giagiam">999.000₫ </del>
+                  <span class="giasp">899.000₫</span>
+                </a>
+                <p class="khuyenmai">
+                  Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                  đạp, sản phẩm Apple, sản phẩm giá sốc)
+                </p>
+                <!----------------------5 sao----------------------------------------------------------->
+                <div id="rating">
+                  <input type="radio" id="star5" name="rating" value="5" />
+                  <label
+                    class="full"
+                    for="star5"
+                    title="Awesome - 5 stars"
+                  ></label>
+      
+                  <input type="radio" id="star4" name="rating" value="4" />
+                  <label
+                    class="full"
+                    for="star4"
+                    title="Pretty good - 4 stars"
+                  ></label>
+      
+                  <input type="radio" id="star3" name="rating" value="3" />
+                  <label
+                    class="full"
+                    for="star3"
+                    title="Meh - 3 stars"
+                  ></label>
+      
+                  <input type="radio" id="star2" name="rating" value="2" />
+                  <label
+                    class="full"
+                    for="star2"
+                    title="Kinda bad - 2 stars"
+                  ></label>
+      
+                  <input type="radio" id="star1" name="rating" value="1" />
+                  <label
+                    class="full"
+                    for="star1"
+                    title="Sucks big time - 1 star"
+                  ></label>
+                </div>
+                <!--0 đánh giá-->
+                <span
+                class="danhgia0"
+                >
+                  0 đánh giá</span
+                >
+                <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                <button
+                class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                data-product-name="Củ sạc 35W 2 Cổng TYPE C"
+                data-product-price="899000"
+                data-product-image="https://img.upanh.tv/2024/03/22/Phukien2.jpg"
+              >
+                Mua ngay
+              </button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+            <div class="card">
+              <img
+                class="p-3 anhsp"
+                src="https://img.upanh.tv/2024/03/22/Phukien3.jpg"
+                alt="Phukien3.jpg"
+              />
+              <div class="card-body">
+                <a href="phukien3.html" class="lienket">
+                  <p class="tensp">
+                    Cáp Type C - Lightning Apple Hỗ trợ sạc nhanh
+                  </p>
+      
+                  
+                  <span class="giasp">299.000₫</span>
+                </a>
+                <p class="khuyenmai">
+                  Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                  đạp, sản phẩm Apple, sản phẩm giá sốc)
+                </p>
+                <!----------------------5 sao----------------------------------------------------------->
+                <div id="rating">
+                  <input type="radio" id="star5" name="rating" value="5" />
+                  <label
+                    class="full"
+                    for="star5"
+                    title="Awesome - 5 stars"
+                  ></label>
+      
+                  <input type="radio" id="star4" name="rating" value="4" />
+                  <label
+                    class="full"
+                    for="star4"
+                    title="Pretty good - 4 stars"
+                  ></label>
+      
+                  <input type="radio" id="star3" name="rating" value="3" />
+                  <label
+                    class="full"
+                    for="star3"
+                    title="Meh - 3 stars"
+                  ></label>
+      
+                  <input type="radio" id="star2" name="rating" value="2" />
+                  <label
+                    class="full"
+                    for="star2"
+                    title="Kinda bad - 2 stars"
+                  ></label>
+      
+                  <input type="radio" id="star1" name="rating" value="1" />
+                  <label
+                    class="full"
+                    for="star1"
+                    title="Sucks big time - 1 star"
+                  ></label>
+                </div>
+                <!--0 đánh giá-->
+                <span
+                class="danhgia0"
+                >
+                  0 đánh giá</span
+                >
+                <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                <button
+                    class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                    data-product-name="Cáp Type C - Lightning Apple"
+                    data-product-price="299000"
+                    data-product-image="https://img.upanh.tv/2024/03/22/Phukien3.jpg"
+                  >
+                    Mua ngay
+                  </button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+            <div class="card">
+              <img
+                class="p-3 anhsp"
+                src="https://img.upanh.tv/2024/03/22/Phukien4.jpg"
+                alt="Phukien4.jpg"
+              />
+              <div class="card-body">
+                <a href="phukien4.html" class="lienket">
+                  <p class="tensp">
+                    Adapter Sạc Type C 20W dùng cho iPhone/iPad Apple 20W
+                  </p>
+      
+                  
+                  <span class="giasp">499.000₫</span>
+                </a>
+                <p class="khuyenmai">
+                  Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                  đạp, sản phẩm Apple, sản phẩm giá sốc)
+                </p>
+                <!----------------------5 sao----------------------------------------------------------->
+                <div id="rating">
+                  <input type="radio" id="star5" name="rating" value="5" />
+                  <label
+                    class="full"
+                    for="star5"
+                    title="Awesome - 5 stars"
+                  ></label>
+      
+                  <input type="radio" id="star4" name="rating" value="4" />
+                  <label
+                    class="full"
+                    for="star4"
+                    title="Pretty good - 4 stars"
+                  ></label>
+      
+                  <input type="radio" id="star3" name="rating" value="3" />
+                  <label
+                    class="full"
+                    for="star3"
+                    title="Meh - 3 stars"
+                  ></label>
+      
+                  <input type="radio" id="star2" name="rating" value="2" />
+                  <label
+                    class="full"
+                    for="star2"
+                    title="Kinda bad - 2 stars"
+                  ></label>
+      
+                  <input type="radio" id="star1" name="rating" value="1" />
+                  <label
+                    class="full"
+                    for="star1"
+                    title="Sucks big time - 1 star"
+                  ></label>
+                </div>
+                <!--0 đánh giá-->
+                <span
+                class="danhgia0"
+                >
+                  0 đánh giá</span
+                >
+                <!---------------------- end 5 sao----------------------------------------------------------->
+      
+                <button
+                    class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                    data-product-name="Adapter Sạc Type C 20W Apple"
+                    data-product-price="499000"
+                    data-product-image="https://img.upanh.tv/2024/03/22/Phukien4.jpg"
+                  >
+                    Mua ngay
+                  </button>
+              </div>
+            </div>
+          </div>
+          <div class="boxsp col-xl-5ths col-lg-3 col-md-4 col-sm-6 col-6 p-1">
+            <div class="card">
+              <img
+                class="p-3 anhsp"
+                src="https://img.upanh.tv/2024/03/22/Phukien5.jpg"
+                alt="Phukien5.jpg"
+              />
+              <div class="card-body">
+                <a href="phukien5.html" class="lienket">
+                  <p class="tensp">
+                    Tai nghe Bluetooth Apple AirPods PRO 2 fullbox
+                  </p>
+      
+                  <del class="giagiam">5.968.000₫</del>
+                  <span class="giasp">4.999.000₫</span>
+                </a>
+                <p class="khuyenmai">
+                  Giảm thêm 2% khi mua cùng sản phẩm có giá cao hơn (trừ Xe
+                  đạp, sản phẩm Apple, sản phẩm giá sốc)
+                </p>
+                <!----------------------5 sao----------------------------------------------------------->
+                <div id="rating">
+                  <input type="radio" id="star5" name="rating" value="5" />
+                  <label
+                    class="full"
+                    for="star5"
+                    title="Awesome - 5 stars"
+                  ></label>
+      
+                  <input type="radio" id="star4" name="rating" value="4" />
+                  <label
+                    class="full"
+                    for="star4"
+                    title="Pretty good - 4 stars"
+                  ></label>
+      
+                  <input type="radio" id="star3" name="rating" value="3" />
+                  <label
+                    class="full"
+                    for="star3"
+                    title="Meh - 3 stars"
+                  ></label>
+      
+                  <input type="radio" id="star2" name="rating" value="2" />
+                  <label
+                    class="full"
+                    for="star2"
+                    title="Kinda bad - 2 stars"
+                  ></label>
+      
+                  <input type="radio" id="star1" name="rating" value="1" />
+                  <label
+                    class="full"
+                    for="star1"
+                    title="Sucks big time - 1 star"
+                  ></label>
+                </div>
+                <!--0 đánh giá-->
+                <span
+                class="danhgia0"
+                >
+                  0 đánh giá</span
+                >
+                <!---------------------- end 5 sao----------------------------------------------------------->
+                <button
+                class="add-to-cart-btn buttoncart them-vao-gio-hang"
+                data-product-name="Apple AirPods PRO fullbox"
+                data-product-price="4999000"
+                data-product-image="https://img.upanh.tv/2024/03/22/Phukien5.jpg"
+              >
+                Mua ngay
+              </button>
+              </div>
+            </div>
+          </div>
+         
+           
+      
+        <!--khung-->
+      </div>
+      <!------------------END Khung sp 3------------------------------------------------------------->
+        </div>
+        </div>
+      </section>
+      <div class="container-fluid mt-5"><a href="Tất cả sản phẩm.html">
+        <img style="width: 100%; border-radius: 10px; margin: 0 auto; float: left;" src="Images/banner_.jpg" alt="ảnh ipad"/> 
+      </a></div>
+ 
+
+
+
+
+      
+<!-- footer------------------------------------------------------------------------------------------------------------>
+      <footer>
+        <div class="footer container-fluid" style="padding:0px;">
+          <div class="footer-top ">
+            <div class="row">
+              <div class="col-xl-4 col-lg-4 col-sm-4 margin-bottom-30">
+                <h4 class="footer-title-top">Giới thiệu</h4>
+                <div class="footer-content-top">
+                  <p><strong>Bảo Tuyết Mobile</strong></p>
+                  <p>Cửa hàng bán lẻ điện thoại di động, smartphone, iPad, laptop, phụ kiện chính hãng, giá tốt nhất. Kèm theo nhiều khuyến mãi hấp dẫn.</p>
+                  <p><strong>Hotline:</strong> <a href="">0984343469</a></p>
+                  <p><strong>Địa chỉ:</strong> 18 Tây Sơn, Quận Đống Đa, Hà Nội</p>
+                </div>
+              </div>
+      
+              <div class="col-xl-4 col-lg-4 col-sm-4 margin-bottom-30">
+                <h4 class="footer-title-top">Liên hệ</h4>
+                <div class="footer-content-top">
+                  <p><strong>Tư vấn bán hàng và hỗ trợ trả góp</strong> <b style="color:red;">0984.3434.69</b> <br>(8h00 - 22h00)</p>
+                  <span>-----------------------------------------------------------</span>
+                  <p><strong>Hỗ trợ kỹ thuật:</strong> 0915.92.6606 <br> (9h30-12h30; 14h-18h30)</p>
+                </div>
+              </div>
+      
+              <div class="col-xl-4 col-lg-4 col-sm-4 margin-bottom-30">
+                <h4 class="footer-title-top">Dịch vụ</h4>
+                <div class="footer-content-top">
+                  <div class="ratio ratio-16x9">
+                    <iframe style="border-radius: 10px;" width="560" height="315" src="https://www.youtube.com/embed/KQsPqwJxsi0?si=MWMkoh38pbshoB3N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="footer-bottom">
+            
+              <div class="row">
+                <div class="col-lg-3 col-sm-6 col-6 p-2" >
+                  <h4 class="footer-title-bot" style="margin-top:0px;">Công Ty</h4>
+                  <div class="footer-content-bot">
+                    <span>Công ty TNHH Thương Mại Quốc Tế Bảo Tuyết</sp>
+                    <p>MST 0107755476 do Sở KH và ĐT TP Hà Nội cấp ngày 30/11/2022</p>
+                    <p>Địa chỉ: Tập thể xí nghiệp Sông Đà, X. Tân Triều, H. Thanh Trì, Tp. Hà Nội</p>
+                    <p>Hotline: <b style="color:red">0984343469</b></p>
+                    <span>Email: baotuyetmobile12345@gmail.com</span>
+                  </div>
+                </div>
+      
+                <div class="col-lg-3 col-sm-6 col-6 p-2">
+                  <h4 class="footer-title-bot">Chính Sách Bán Hàng</h4>
+                  <ul class="footer-links" >
+                    <li><a href="BaoMatTT.html"><img src="Images/boltsl.svg">&nbsp;Chính sách bảo mật thông tin</a></li>
+                    <li><a href="XulyKNai.html"><img src="Images/boltsl.svg">&nbsp;Chính sách xử lý khiếu nại</a></li>
+                    <li><a href="KiemHang.html"><img src="Images/boltsl.svg">&nbsp;Chính sách kiểm hàng</a></li>
+                    <li><a href="VanChuyen.html"><img src="Images/boltsl.svg">&nbsp;Chính sách vận chuyển</a></li>
+                    <li><a href="DoiTra.html"><img src="Images/boltsl.svg">&nbsp;Chính sách đổi trả</a></li>
+                    <li><a href="ThanhToan.html"><img src="Images/boltsl.svg">&nbsp;Chính sách thanh toán</a></li>
+                  </ul>
+                </div>
+      
+                <div class="col-lg-3 col-6  ">
+                  <h4 class="footer-title-bot">Hướng Dẫn</h4>
+                  <ul class="footer-links">
+                    <li><a href="MuaHangTX.html"><img src="Images/boltsl.svg">&nbsp;Hướng dẫn mua hàng từ xa</a></li>
+                    <li><a href="DatHang.html"><img src="Images/boltsl.svg">&nbsp;Đặt hàng qua Facebook</a></li>
+                  </ul>
+                  <div class="payment">
+                    <h4 class="footer-titlex">Phương thức thanh toán</h4>
+                    <a href="ThanhToan.html"><img src="Images/thanhtoan.png" alt="Phương thức thanh toán" height="auto"></a>
+                  </div>
+                </div>
+      
+                <div class="col-lg-3 col-sm-6 col-6 p-3 " style="margin-bottom:115px;">
+                  <h4 class="footer-title-bot">Giới thiệu</h4>
+                  <ul class="footer-links">
+                    <li><a href="GioiThieu.html"><img src="Images/boltsl.svg">&nbsp;Giới thiệu</a></li>
+                    <li><a href="#"><img src="Images/boltsl.svg">&nbsp;Sản phẩm</a></li>
+                    <li><a href="#"><img src="Images/boltsl.svg">&nbsp;Khuyến Mãi</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </footer>
+<script src="section.js"></script>
+
+</body>
+</html>

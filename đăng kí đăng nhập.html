@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảo Tuyết Mobile</title>
+    <link rel="icon" type="image/x-icon" href="ảnh/logotitle.svg" />
+    <link rel="icon" type="image/x-icon" href="CANVAR.html" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Đặt văn bản ở giữa */
+      }
+
+      .container h3 {
+        display: inline-block; /* Để chữ "Hmember" hiển thị trên cùng một dòng với hình ảnh */
+        margin-bottom: 5px; /* Khoảng cách với đoạn văn bản bên dưới */
+        color: red; /* Màu chữ đỏ */
+        font-family: monaclas, "Andale Mono", "Lucida Console",
+          "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+      }
+
+      .container img {
+        width: 50px;
+        vertical-align: middle; /* Canh giữa hình ảnh theo chiều dọc */
+        animation: spin 2s linear infinite; /* Áp dụng hiệu ứng quay */
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg); /* Quay một vòng tròn đầy */
+        }
+      }
+
+      .container strong {
+        display: block; /* Đảm bảo văn bản nằm trên dòng mới */
+        margin-bottom: 20px; /* Khoảng cách với nút dưới */
+      }
+
+      .btn {
+        width: 45%; /* Đặt chiều rộng của nút */
+        margin: 5px; /* Khoảng cách giữa các nút */
+        transition: transform 0.3s ease; /* Hiệu ứng lướt trong 0.3 giây với kiểu chuyển động dễ dàng */
+      }
+
+      .btn:hover {
+        opacity: 0.8; /* Hiệu ứng mờ khi hover */
+        transform: translateY(-5px); /* Di chuyển nút lên trên khi hover */
+      }
+      #register-btn {
+        background-color: #cf3538;
+        border: none;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-image: url('ảnh/nềntrang.jpg');
+      background-size: cover;
+      background-position: center;
+    "
+  >
+    <a href="Trang chủ.html">
+      <img
+        src="ảnh/logo.baotuyet.png"
+        style="width: 120px; position: absolute; margin-top: -50px; opacity: 1"
+    /></a>
+    <div class="container" style="opacity: 0.8">
+      <h3><b>Hmember</b></h3>
+      <br />
+      <iframe
+        src="CANVAR.html"
+        height="80"
+        width="80"
+        title="Iframe Example"
+        style="border: none"
+      >
+      </iframe>
+
+      <br /><br />
+      <strong
+        >Vui lòng đăng nhập tài khoản Hmember để xem xem ưu đãi và đánh
+        giá</strong
+      >
+      <a href="dangki.html" class="btn btn-primary" id="register-btn"
+        >Đăng ký</a
+      >
+      <a href="đăng nhập.html" class="btn btn-secondary" id="login-btn"
+        >Đăng nhập</a
+      >
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document
+        .getElementById("register-btn")
+        .addEventListener("click", function () {
+          window.location.href = "đăng kí và đăng nhập.html"; // Thay đổi đường dẫn tương ứng với trang đăng ký của bạn
+        });
+
+      document
+        .getElementById("login-btn")
+        .addEventListener("click", function () {
+          window.location.href = "đăng nhập.html"; // Thay đổi đường dẫn tương ứng với trang đăng nhập của bạn
+        });
+    </script>
+  </body>
+</html>

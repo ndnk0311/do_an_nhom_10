@@ -1,0 +1,817 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<title>Bảo Tuyết Mobile</title><link rel="icon" type="image/x-icon" href="ảnh/logotitle.svg">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Header hau.css'>
+    <link rel="stylesheet" href="section.css"/>
+  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <style>
+      .w-100:hover {
+			width:200px;
+			opacity:0.5;
+			-ms-transform: scale(0.5); /* IE 9 */
+  			-webkit-transform: scale(1.0); /* Safari 3-8 */
+  			transform: scale(1.5); 
+		}
+		
+		
+		.btn:hover,
+		.btn-danger:hover,
+		.btn-lg:hover {
+    		opacity: 0.8; /* Adjust the opacity as desired */
+			
+		}
+		.btn:hover {
+        background-color: #ff0000; /* Đổi màu nền thành màu đỏ */
+			color: #ffffff; }
+		
+		
+		.giuseart-mobile-contact-bar {
+    		display: none;
+		}
+	.giuseart-pc-contact-bar {
+    right: 30px; /* Adjusted to right side */
+    bottom: 30px;
+    position: fixed;
+    z-index: 998;
+    margin-bottom: 0;
+}
+	.giuseart-pc-contact-bar li {
+    width: 44px;
+    height: 46px;
+    overflow: hidden;
+    margin-bottom: 0;
+    list-style: none;
+}
+	.giuseart-pc-contact-bar li.facebook {
+    margin-bottom: 8px;
+    background: url(https://giuseart.com/wp-content/uploads/2020/03/fb.png);
+    background-repeat: no-repeat;
+}
+	.giuseart-pc-contact-bar li.zalo {
+    margin-bottom: 8px; /* Adjusted margin for spacing */
+    background: url(https://giuseart.com/wp-content/uploads/2020/03/zl.png);
+    background-repeat: no-repeat;
+}
+	.giuseart-pc-contact-bar li.hotline {
+    background: url(https://giuseart.com/wp-content/uploads/2020/03/p2.gif);
+    background-repeat: no-repeat;
+    background-size: 44px;
+}		
+	.giuseart-pc-contact-bar li a {
+    display: block;
+    width: 44px;
+    height: 44px;
+}
+
+/* Hover effects */
+	.giuseart-pc-contact-bar li.facebook:hover,
+	.giuseart-mobile-contact-bar li.facebook:hover {
+    opacity: 0.8; /* Adjust the opacity as desired */
+}
+
+	.giuseart-pc-contact-bar li.zalo:hover,
+	.giuseart-mobile-contact-bar li.zalo:hover {
+    opacity: 0.8;
+	/* Adjust the opacity as desired */
+}
+
+	.giuseart-pc-contact-bar li.hotline:hover,
+	.giuseart-mobile-contact-bar li.hotline:hover {
+    opacity: 0.8;
+   /* Adjust the opacity as desired */
+}
+
+	@media only screen and (max-width: 499px)
+{
+    .giuseart-pc-contact-bar {
+        display: none;
+    }
+    .giuseart-mobile-contact-bar {
+        right: 10px; /* Adjusted to right side */
+        bottom: 10px;
+        position: fixed;
+        z-index: 998;
+        margin-bottom: 0;
+        display: block !important;
+    }
+    .giuseart-mobile-contact-bar li {
+        display: inline-block;
+        float: right; /* Adjusted to float right */
+        margin-left: 7px; /* Adjusted margin for spacing */
+        list-style: none;
+    }
+    .giuseart-mobile-contact-bar li.facebook {
+        margin-bottom: 8px;
+        background: url(https://giuseart.com/wp-content/uploads/2020/03/fb.png);
+        background-repeat: no-repeat;
+    }
+    .giuseart-mobile-contact-bar li.zalo {
+        background: url(https://giuseart.com/wp-content/uploads/2020/03/zl.png);
+        background-repeat: no-repeat;
+    }
+    .giuseart-mobile-contact-bar li.hotline {
+        background: url(https://giuseart.com/wp-content/uploads/2020/03/p2.gif);
+        background-repeat: no-repeat;
+        background-size: 44px;
+    }
+    .giuseart-mobile-contact-bar li a {
+        display: block;
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Hover effects for mobile */
+    .giuseart-mobile-contact-bar li.facebook:hover {
+        opacity: 0.8; /* Adjust the opacity as desired */
+    }
+
+    .giuseart-mobile-contact-bar li.zalo:hover {
+        opacity: 0.8; /* Adjust the opacity as desired */
+    }
+
+    .giuseart-mobile-contact-bar li.hotline:hover {
+        opacity: 0.8; /* Adjust the opacity as desired */
+    }
+}
+		.zoom:hover {
+			width:830px;
+			opacity:0.5;
+			
+		}
+
+		input[type="text"],input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .review-info {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        .review-info  {
+            margin-top: 0;
+            color: #333;
+        }
+        .review-info  {
+            margin: 10px 0;
+            color: #666;
+        }
+       
+        .rating input {
+            display: none;
+        }
+        .rating label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .rating input:checked ~ label,
+        .rating input:checked ~ label ~ label {
+            color: #ffc107; /* Yellow color for selected stars */
+        }
+
+		.review-info {
+    display: flex;
+    flex-direction: column; /* Hiển thị các phần tử con theo chiều dọc */
+}
+
+.review-info p {
+    margin: 5px 0; /* Giảm khoảng cách giữa các dòng */
+}
+
+.review-info p:nth-child(4) {
+    margin-left: auto; /* Di chuyển phần hiển thị thời gian sang bên phải */
+}
+  
+
+    .color-options {
+        margin-left: 20px;
+		
+       
+    }
+
+    .color-option {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+       
+        border: 2px solid transparent;
+        transition: border-color 0.3s;
+        position: relative;
+    }
+
+    .color-option:hover {
+        border-color: #007bff;
+    }
+
+    .green { background-color: blue; }
+    .black { background-color: black; }
+    .pink { background-color: pink; }
+
+    /* Định dạng input radio */
+    input[type="radio"] {
+
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    /* Hiển thị checkmark khi input radio được chọn */
+    input[type="radio"]:checked + .color-option::after {
+        content: '\2713';
+        font-size: 24px;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+	footer {
+    background-color:#333; /* Đổi màu nền thành màu xám */
+    padding: 20px; /* Thêm padding để tạo khoảng cách xung quanh nội dung trong footer */
+}
+      /*Layout từng thiết bị---------------------------------------------------------------*/
+     @media (min-width: 992px) {
+  .col-xl-5ths {
+    width: 20%;
+    float: left;
+  }
+  }
+  @media (max-width: 992px) {
+  .col-lg-3 {
+    width: 25%;
+    float: left;
+  }
+  }
+  @media (max-width: 768px) {
+  .col-md-4 {
+    width: 50%;
+    float: left;
+  }
+  }
+  @media (max-width: 576px) {
+  .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  }
+  @media (max-width: 320px) {
+  .col-6 {
+    width: 100%;
+    float: left;
+  }
+  }
+  /*Layout từng thiết bị---------------------------------------------------------------*/
+    </style>
+  </head>
+<body >
+	<header>
+		<nav style="margin-top: -20px; background-color: #ffff;" class="navbar navbar-expand-xxl">
+		  <div class="container">
+			<a  class="navbar-brand" href="Trang chủ.html"
+			  ><img style="max-width: 150px;" src="ảnh/logo.baotuyet.png" alt=""
+			/></a>
+			<button
+			  class="navbar-toggler"
+			  type="button"
+			  data-bs-toggle="collapse"
+			  data-bs-target="#mynavbar"
+			>
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="mynavbar">
+			  <form style="display: flex; margin-left: 10px;">
+				<div class="dropdowntimkiem">
+				  <input  style="width:300px;margin-top: 20px;"
+					type="text"
+					placeholder="Nhập tên sản phẩm"
+					id="myInputtimkiem"
+					onkeyup="filterFunctiontimkiem()"
+				  />
+				  <button
+					onclick="myFunctiontimkiem()"
+					class="dropbtntimkiem"
+					onmouseout="hideDropdowntimkiem()"
+				  >
+					<i class="fa fa-search"></i>
+				  </button>
+	
+				  <div id="myDropdowntimkiem" class="dropdown-contenttimkiem">
+					<a href="Lọc Ipad.html"><span>IPAD</span></a>
+					<a href="Lọc Iphone.html">IPHONE</a>
+					<a href="Lọc Phukien.html">Củ sạc</a>
+					<a href="Lọc Phukien.html">Dây sạc</a>
+					<a href="Lọc Phukien.html">Tai nghe</a>
+					<a href="Lọc Iphone.html">Apple</a>
+					<a href="Lọc Phukien.html">Airpods</a>
+					<a href="ip 15 1B.html">IPHONE 15 PRO</a>
+					<a href="ip14.html">IPHONE 14 PRO</a>
+					<a href="ip13 256G.html">IPHONE 13 PRO</a>
+					<a href="ip 15 1B.html">IPHONE 15</a>
+					<a href="ip14.html">IPHONE 14</a>
+					<a href="ip13.html">IPHONE 13</a>
+					<div
+					  class="nosptimkiem"
+					  id="noResultstimkiem"
+					  style="display: none"
+					>
+					  Không tìm thấy sản phẩm phù hợp.
+					</div>
+				  </div>
+				</div>
+			  </form>
+			  <ul class="navbar-nav" style="float: left;">
+				<li class="nav-item" style="margin-left: -720px;">
+				  <a class="kieuchuheader" href="Trang chủ.html"
+					><img
+					  src="Images/home.svg"
+					  height="22px"
+					  style="margin-left: 20px;"
+					/><br />TRANG CHỦ</a
+				  >
+				</li>
+				<li class="nav-item" style="margin-left: 20px;">
+				  <a class="kieuchuheader" href="Lọc Iphone.html"
+					><img
+					  style="margin-left: 10px"
+					  src="Images/apple.svg"
+					  height="22px"
+					/><br />IPHONE</a
+				  >
+				  <ul class="submenu">
+					<div class="col1">
+					  <li>
+						<a href="Lọc Iphone.html">IPhone 15 Series</a>
+						<!-- <ul class="col1">
+					  <li><a href="#">IPhone 15 ProMax</a></li>
+					  <li><a href="#">IPhone 15 Pro</a></li>
+					  <li><a href="#">IPhone 15 Plus</a></li>
+					  <li><a href="#">IPhone 15</a></li>
+					</ul>-->
+					  </li>
+					  <li><a href="ip14.html">IPhone 14 Series</a></li>
+					  <li><a href="ip13 256G.html">IPhone 13 Series</a></li>
+					  <li><a href="ip12.html">IPhone 12 Series</a></li>
+					  <li><a href="ip11 256G.html">IPhone 11 Series</a></li>
+					</div>
+				  </ul>
+				</li>
+	
+				<li class="nav-item" style="margin-left: 20px;">
+				  <a class="kieuchuheader" href="Lọc Ipad.html"
+					><img
+					  src="Images/tablet.svg"
+					  height="22px"
+					  style="margin-left: 10px"
+					/><br />
+					&ensp;IPAD</a
+				  >
+				  <ul class="submenu">
+					<div class="col1">
+					  <li><a href="ipad2.html">Ipad Pro</a></li>
+					  <li><a href="ipad4.html">Ipad AIR</a></li>
+					  <li><a href="ipad5.html">Ipad Gen</a></li>
+					</div>
+				  </ul>
+				</li>
+				<li class="nav-item" style="margin-left: 20px;">
+				  <a class="kieuchuheader" href="Lọc Phukien.html">
+					<img
+					  src="Images/smartwatch.svg"
+					  height="22px"
+					  style="margin: 5px 28px auto"
+					/><br />PHỤ KIỆN
+				  </a>
+				</li>
+				<li class="nav-item"  style="margin-left: 20px;">
+				  <a
+				  href="đăng kí đăng nhập.html"
+				  class="kieuchuheader"
+					><img
+					  src="Images/person-circle.svg"
+					  height="22px"
+					  style="margin: 5px 38px auto"
+					/><br />ĐĂNG NHẬP</a
+				  >
+				</li>
+				<li class="nav-item"  style="margin-left: 30px;"> <div class="dropdowncartgiohang">
+				  <button onclick="myFunction()" class="dropbtncartgiohang" style="border: #f1f1f1;background-color: white;"><i class="fa-solid fa-cart-shopping"></i></button>
+				  <div id="myDropdowncartgiohang" class="dropdown-contentcartgiohang">
+				   <div id="cart">
+					<h2>Giỏ hàng của bạn</h2>
+					<ul id="cart-items"></ul>
+					<div id="cart-total">
+					  Tổng tiền: <span id="cart-total-price">0₫</span>
+					</div>
+					<button id="clear-cart-btn"><a href="Trang chủ.html">Xóa giỏ hàng</a></button>
+					<button class="thanhtoancart"><a href="ThanhToan.html">Thanh toán</a></button>
+				  </div>
+				  
+				  </div></li>
+				<li class="nav-item"></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+	  </header>
+	  <section style="height: 120px;">
+	</section>
+		
+<!--hưởng-->	
+	  <div class= "container-sm">
+	<div class="main" style="padding-top: 0px;" >
+			<div class= "row">
+ 			  	<div class ="col-5 text-center bg-white" style="margin-left: 50px;">
+    			  	<h5 style="font-weight: bold;">iPhone 13 512GB | Chính hãng VN/A</h5>
+  				 </div>
+			</div>
+			<div class= "container" style="margin-top:20px">
+        		 <div class= "row">
+            			<div class ="col-sm-4 bg-white">
+               				<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  								<div class="carousel-indicators">
+   									 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    								<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+   									 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+   									 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+   									 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+   									 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+  								</div>
+  								<div class="carousel-inner">
+     								 <div class="carousel-item active">
+										<img src="ảnh/iphone-12c.webp" class="d-block w-100" alt="..." style="width: 300px; height: 400px;" >
+										  
+    								</div>
+    								<div class="carousel-item">
+    									   
+										   <img src="ảnh/iphone-13d.jpg" class="d-block w-100" alt="..." style="width: 300px; height: 400px;">
+   									 </div>
+   									 <div class="carousel-item">
+    									  <img src="ảnh/iphone-13c.jpg" class="d-block w-100" alt="..." style="width: 300px; height: 400px;" >
+     									
+    								</div>
+    								 <div class="carousel-item">
+    									  <img src="ảnh/iphone-13d.jpg" class="d-block w-100" alt="..." style="width: 300px; height: 400px;">
+     									
+    								</div>
+    								 <div class="carousel-item">
+    									  <img src="ảnh/iphone-13e.jpg" class="d-block w-100" alt="..." style="width: 300px; height:400px;">
+     									
+    								</div>
+    								 <div class="carousel-item">
+    									  <img src="ảnh/iphone-13f.jpg" class="d-block w-100" alt="..." style="width: 300px; height: 400px;">
+     									
+    								</div>
+  							</div>
+  						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  						  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  						  <span class="visually-hidden">Previous</span>
+ 						 </button>
+ 						 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+   							 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+   							 <span class="visually-hidden">Next</span>
+  						</button>
+					  </div>	
+           			 </div>
+						<div class="col-sm-4 bg-white" style="padding-left: 10px;">
+							<h4 style="color: red; font-family: tahoma;">23.490.000 đ</h4>
+								<s>28.990.000 đ</s>
+									<!--CHONMAU-->
+							<div class="product-colors">
+								<div class="color-options">
+									<label>
+										<input type="radio" name="color" value="green" onclick="selectColor('green')">
+										<div class="color-option green"></div>
+									</label>
+									<label>
+										<input type="radio" name="color" value="black" onclick="selectColor('black')">
+										<div class="color-option black"></div>
+									</label>
+									<label>
+										<input type="radio" name="color" value="pink" onclick="selectColor('pink')">
+										<div class="color-option pink"></div>
+									</label>
+								</div>
+								<input type="hidden" id="selected-color" name="selected-color">
+							</div>
+
+							<div class="btn-toolbar" style="padding-top: 15px;">
+						<a href="ip12.html"><button type="button" class="btn btn-light">128GB <h6>19.490.000 đ</h6></button></a>
+						<a href="ip 12 256g.html">	<button type="button" class="btn btn-light" style="margin-left: 15px;">256GB <h6>20.490.000 đ</h6></button></a>
+						<a href="ip12 512g.html"><button type="button" class="btn btn-light" style="margin-left: 15px;">512GB <h6>23.490.000 đ</h6></button></a>
+							</div>
+						  <!--MUA HANG-->
+						  <div>
+							<a href="ThanhToan.html" class="btn btn-danger btn-lg text-center" style="width: 360px; margin-top: 10px;">
+								<img src="ảnh/mua-hang-icon.png" style="margin-bottom: 3px; width:50px;"> Mua Ngay
+							</a>
+							<a href="QuaTang.html" class="btn btn-danger btn-lg text-center" style="width: 360px; margin-top: 10px;">
+								<img src="ảnh/icon.svg" style="margin-bottom: 3px; width:50px;"> Khuyến mại
+							</a>
+							<a href="VanChuyen.html" class="btn btn-danger btn-lg text-center" style="max-width: 360px; margin-top: 10px;">
+								<h6 style="color: black;">Thời gian đặt hàng dự kiến: Từ 15 - 21/10, trả hàng từ 22/10</h6>
+								<span style="text-decoration: underline; font-size: 15px; margin-right: 131px;">Thu cũ lên đời trợ giá 3 triệu</span>
+							</a>
+						</div>
+						
+           			 </div>
+           			 <div class ="col-sm-3 bg-white">
+              				 <table class="table table-striped">
+   								<thead>
+    							  <tr>
+        							 <h3>Thông số kĩ thuật</h3>
+     							  </tr>
+   								</thead>
+  								 <tbody>
+    								  <tr>
+        								 <td>Kích thước màn hình</td>
+        								 <td>6.1 inches</td>
+     								 </tr>
+     								 <tr>
+       									  <td>Công nghệ màn hình</td>
+      									  <td>OLED</td>
+    							     </tr>
+     								 <tr>
+        								 <td>Camera sau</td>
+       								     <td>Camera góc rộng: 12MP, f/1. Camera góc siêu rộng: 12MP, ƒ/2.4</td>
+        								 
+     								 </tr>
+     								 <tr>
+     								 	<td>Camera trước</td>
+     								 	<td>12MP, f/2.2</td>
+     								 </tr>
+     								  <tr>
+     								 	<td>Chipset</td>
+     								 	<td>Apple A15</td>
+     								 </tr>
+     								  <tr>
+     								 	<td>Dung lượng RAM</td>
+     								 	<td>4 GB</td>
+     								 </tr>
+   								</tbody>
+							</table>
+           			 </div>
+				</div>
+      		</div>
+         </div>
+			 <div class="content" style="margin-top: 50px;">
+         	 <div class= "container-smsm">
+         <div class= "row">
+            <div class ="col-sm-8 bg-white">
+               <h3 style="font-weight: bold;">Đánh giá iPhone 13 - "Siêu phẩm" khẳng định đẳng cấp</h3>
+				<p style=" font-size: 15px;">Trong khi sức hút đến từ bộ ba iPhone 11 vẫn chưa nguội đi, hãng Apple vừa qua đã cho ra mắt "siêu phẩm" mới nhất 2020 mang tên iPhone 12. Với những nâng cấp đáng kể cho màn hình và hiệu năng, đây sẽ là smartphone thuộc phân khúc cao cấp đáng chú ý trong năm nay.</p>
+				<iframe width="760" height="415" src="https://www.youtube.com/embed/KQsPqwJxsi0" allowfullscreen></iframe>
+				<h4 style="font-weight: bold;">Camera chính 48MP – Hỗ trợ quay phim chụp ảnh thông minh</h4>
+				ụng thấu kính bảy thành phần cùng khẩu độ ƒ/1.6 và camera góc rộng ƒ/2.4 hỗ trợ chụp góc 120 độ. Máy được trang bị nhiều chế độ chụp từ cơ bản đến chụp nâng cao như Photonic Engine, Deep Fusion hay chụp chân dung với 6 chế độ ánh sáng<p style="font-size: 15px;">Điện thoại iPhone 15 thường được trang bị cụm camera kép với độ phân giải 48MP. Trong đó camera chính sử d</p>
+				<img class="zoom" src="ảnh/iphone-13-13.png">
+				
+				<p style="font-size: 15px;">Điện thoại iPhone 15 thường được trang bị cụm camera kép với độ phân giải 48MP. Trong đó camera chính sử dụng.hãng Apple vừa qua đã cho ra mắt "siêu phẩm" mới nhất 2020 mang tên iPhone 12. Với những nâng cấp đáng kể cho màn hình và hiệu năng, đây sẽ là smartphone thuộc phân khúc cao cấp đáng chú ý trong năm nay.</p>
+			</div>
+
+			
+            <div class ="col-sm-3 bg-white">
+				<a href="ip15.html" style="text-decoration: none;color:#333;">	
+               <div class="card" style="width: 18rem;">
+				   <h5 class="card-title"> Các sản phẩm tương tự</h5>
+ 									 <div class="carousel-inner">
+     								 <div class="carousel-item active">
+     								 <img src="ảnh/iphone-15-128gb-xanh-la.webp" class="d-block w-100" alt="">
+    								</div>
+  							</div>
+				   <div class="card-body">
+					   <h4 class="card-text"><a href="ip11.html"style="text-decoration: none;color:#333;opcity:0.5">Điện thoại iPhone 15 256GB</a></h4>
+					<a href="ip15.html"style="text-decoration: none;color:#333">Nhấn xem thông tin</a>
+				</a>
+				  </div>
+			</div>
+            </div>
+        	 </div>
+    	  </div>
+         </div>
+		</div>
+		<!-- Form -->
+		<div class="container-sm"style="font-family: Arial, sans-serif; "> 
+			<div class="col-sm-7" style=" max-width:100%;margin-left: 50px ;background-color: #fff;border-radius: 8px;box-shadow:20px 20px 20px 20px rgba(0.1, 0.1, 0.1, 0.1);padding: 20px;" >
+				
+					<h2 style=" text-align: center;color: #ed2c2c;">Đánh Giá Sản Phẩm</h2>
+					<form id="reviewForm" action="#" method="post" style=" margin-top: 20px;">
+						<label for="name" style="font-size:20px;  color: #666;font-weight: bold;">Tên của bạn:</label>
+						<input type="text" id="name" name="name" required>
+			
+						<label for="email" style="color: #666;font-weight: bold;";>Email:</label>
+						<input type="email" id="email" name="email" required>
+						<br>
+						<label for="rating"style="color: #666;font-weight: bold;">Đánh Giá:</label>
+						<div class="rating">
+							<input type="radio" id="star5" name="rating" value="5">
+							<label for="star1">&#9733;</label>
+							<input type="radio" id="star4" name="rating" value="4">
+							<label for="star2">&#9733;</label>
+							<input type="radio" id="star3" name="rating" value="3">
+							<label for="star3">&#9733;</label>
+							<input type="radio" id="star2" name="rating" value="2">
+							<label for="star4">&#9733;</label>
+							<input type="radio" id="star1" name="rating" value="1">
+							<label for="star5">&#9733;</label>
+						</div>
+			
+						<label for="comment" style="color: #666;font-weight: bold;">Bình Luận:</label>
+						<textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+			
+						<input type="submit" value="Gửi Đánh Giá">
+					</form>
+	
+					  <!-- Phần hiển thị đánh giá -->
+					  <div id="reviewSection" class="review-info" style="display: none;">
+						<h3>Đánh Giá :</h3>
+					  
+					  <p> <span id="reviewEmail" style="font-size:20px;font-weight: 300;"></span> :
+					  
+					   <span id="reviewComment"style="font-weight:100"></span>
+						<sup id="reviewRating"></sup></p>
+						<span id="reviewTime" style="float:right;"></span>
+					</div>
+		</div>
+			
+			<!-- Footer content -->
+	
+		</div>
+	</div>
+	<footer >
+   
+		<div class="container-fluid">
+	  
+		  <div class="footer-bottom">
+			<div class="container-sm">
+			  <div class="row">
+			
+				<div class="col-lg-3 p-2" >
+				  <h4 class="footer-title-bot" style="margin-top:0px;">Công Ty</h4>
+				  <div class="footer-content-bot">
+					<span>Công ty TNHH Thương Mại Quốc Tế Bảo Tuyết</sp>
+					<p>MST 0107755476 do Sở KH và ĐT TP Hà Nội cấp ngày 30/11/2022</p>
+					<p>Địa chỉ: Tập thể xí nghiệp Sông Đà, X. Tân Triều, H. Thanh Trì, Tp. Hà Nội</p>
+					<p>Hotline: <b style="color:red">0984343469</b></p>
+					<span>Email: baotuyetmobile12345@gmail.com</span>
+				  </div>
+				</div>
+	  
+				<div class="col-lg-3 p-2">
+				  <h4 class="footer-title-bot">Chính Sách Bán Hàng</h4>
+				  <ul class="footer-links" >
+					<li><a href="BaoMatTT.html"><img src="Images/boltsl.svg">&nbsp;Chính sách bảo mật thông tin</a></li>
+					<li><a href="XulyKNai.html"><img src="Images/boltsl.svg">&nbsp;Chính sách xử lý khiếu nại</a></li>
+					<li><a href="KiemHang.html"><img src="Images/boltsl.svg">&nbsp;Chính sách kiểm hàng</a></li>
+					<li><a href="VanChuyen.html"><img src="Images/boltsl.svg">&nbsp;Chính sách vận chuyển</a></li>
+					<li><a href="DoiTra.html"><img src="Images/boltsl.svg">&nbsp;Chính sách đổi trả</a></li>
+					<li><a href="ThanhToan.html"><img src="Images/boltsl.svg">&nbsp;Chính sách thanh toán</a></li>
+				  </ul>
+				</div>
+	  
+				<div class="col-lg-3 p-2 ">
+				  <h4 class="footer-title-bot">Hướng Dẫn</h4>
+				  <ul class="footer-links">
+					<li><a href="MuaHangTX.html"><img src="Images/boltsl.svg">&nbsp;Hướng dẫn mua hàng từ xa</a></li>
+					<li><a href="DatHang.html"><img src="Images/boltsl.svg">&nbsp;Đặt hàng qua Facebook</a></li>
+				  </ul>
+				  <div class="payment">
+					<h4 class="footer-titlex">Phương thức thanh toán</h4>
+					<a href="ThanhToan.html"><img src="Images/thanhtoan.png" alt="Phương thức thanh toán" height="auto"></a>
+				  </div>
+				</div>
+	  
+				<div class="col-lg-3 p-3 " style="margin-bottom:115px;">
+				  <h4 class="footer-title-bot">Giới thiệu</h4>
+				  <ul class="footer-links">
+					<li><a href="GioiThieu.html"><img src="Images/boltsl.svg">&nbsp;Giới thiệu</a></li>
+					<li><a href="#"><img src="Images/boltsl.svg">&nbsp;Sản phẩm</a></li>
+					<li><a href="#"><img src="Images/boltsl.svg">&nbsp;Khuyến Mãi</a></li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		 </div>
+		</div>
+	  </footer>
+	
+	
+		<script>
+			// chọn màu
+			function selectColor(color) {
+			var selectedColor = document.getElementById('selected-color');
+			selectedColor.value = color;
+		}
+	
+		function submitColor() {
+			var selectedColor = document.getElementById('selected-color').value;
+			if (selectedColor !== '') {
+				alert("Bạn đã chọn màu: " + selectedColor);
+				// Thực hiện các hành động khác sau khi chọn màu, ví dụ: gửi dữ liệu đến máy chủ
+			} else {
+				alert("Vui lòng chọn một màu sắc trước khi nhấn Chọn.");
+			}
+		}
+			// JavaScript code
+			document.getElementById("reviewForm").addEventListener("submit", function(event) {
+				event.preventDefault(); // Prevent the form from submitting
+	
+				// Get form data
+				var formData = {
+					name: document.getElementById("name").value,
+					email: document.getElementById("email").value,
+					rating: document.querySelector("input[name='rating']:checked").value,
+					comment: document.getElementById("comment").value,
+					time: new Date().toLocaleString() // Get current time
+				};
+	
+				// Simulate sending data to the server (replace this with actual AJAX call)
+				setTimeout(function() {
+					// Fill in review section with submitted data
+				  
+					document.getElementById("reviewEmail").textContent = formData.email;
+					document.getElementById("reviewRating").innerHTML = "&#9733;".repeat(formData.rating);
+					document.getElementById("reviewComment").textContent = formData.comment;
+					document.getElementById("reviewTime").textContent = formData.time; 
+	
+					// Show the review section
+					document.getElementById("reviewSection").style.display = "block";
+	
+					// Reset form
+					document.getElementById("reviewForm").reset();
+				}, 1000); // Simulate delay for 1 second
+			});
+		</script>
+
+
+
+ 
+</div>
+<ul class="giuseart-pc-contact-bar">
+<li class="facebook">
+<a href="" target="_blank" rel="nofollow"></a>
+</li>
+<li class="zalo">
+<a href="" target="_blank" rel="nofollow"></a>
+</li>
+</ul>
+ 
+<ul class="giuseart-mobile-contact-bar">
+<li class="facebook">
+<a href="" target="_blank" rel="nofollow"></a>
+</li>
+<li class="zalo">
+<a href="https://zalo.me/0972939830" target="_blank" rel="nofollow"></a>
+</li>
+<li class="hotline">
+<a href="tel:0972939830" target="_blank" rel="nofollow"></a>
+</li>
+</ul>
+	</div>
+</body>
+</html>

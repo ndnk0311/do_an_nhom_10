@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bảo Tuyết Mobile</title><link rel="icon" type="image/x-icon" href="ảnh/logotitle.svg">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Header hau.css'>
+    <link rel="stylesheet" href="section.css"/>
+    <link rel='stylesheet' type='text/css' media='screen' href="Header.css">
+    <link rel='stylesheet' type='text/css' media='screen' href="Header1.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link src="css/bootstrap.min.css"></link>
+    <script src="js.txt"></script>
+     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Main.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="js/bootstrap.min.js"></script>
+    <link src="css/bootstrap.min.css"></link>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href="Header.css">
+	<link rel='stylesheet' type='text/css' media='screen' href="Header1.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <style>
+    
+      /*Layout từng thiết bị---------------------------------------------------------------*/
+     @media (min-width: 992px) {
+  .col-xl-5ths {
+    width: 20%;
+    float: left;
+  }
+  }
+  @media (max-width: 992px) {
+  .col-lg-3 {
+    width: 25%;
+    float: left;
+  }
+  }
+  @media (max-width: 768px) {
+  .col-md-4 {
+    width: 50%;
+    float: left;
+  }
+  }
+  @media (max-width: 576px) {
+  .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  }
+  @media (max-width: 320px) {
+  .col-6 {
+    width: 100%;
+    float: left;
+  }
+  }
+  /*Layout từng thiết bị---------------------------------------------------------------*/
+    </style>
+  </head>
+<body>
+  
+  <header>
+    <nav style="margin-top: -20px; background-color: #ffff;" class="navbar navbar-expand-xxl">
+      <div class="container">
+        <a  class="navbar-brand" href="Trang chủ.html"
+          ><img style="max-width: 150px;" src="ảnh/logo.baotuyet.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <form style="display: flex; margin-left: 10px;">
+            <div class="dropdowntimkiem">
+              <input
+                type="text"
+                placeholder="Nhập tên sản phẩm"
+                id="myInputtimkiem"
+                onkeyup="filterFunctiontimkiem()"
+              />
+              <button
+                onclick="myFunctiontimkiem()"
+                class="dropbtntimkiem"
+                onmouseout="hideDropdowntimkiem()"
+              >
+                <i class="fa fa-search"></i>
+              </button>
+
+              <div id="myDropdowntimkiem" class="dropdown-contenttimkiem">
+                <a href="Lọc Ipad.html"><span>IPAD</span></a>
+                <a href="Lọc Iphone.html">IPHONE</a>
+                <a href="Lọc Phukien.html">Củ sạc</a>
+                <a href="Lọc Phukien.html">Dây sạc</a>
+                <a href="Lọc Phukien.html">Tai nghe</a>
+                <a href="Lọc Iphone.html">Apple</a>
+                <a href="Lọc Phukien.html">Airpods</a>
+                <a href="ip 15 1B.html">IPHONE 15 PRO</a>
+                <a href="ip14.html">IPHONE 14 PRO</a>
+                <a href="ip13 256G.html">IPHONE 13 PRO</a>
+                <a href="ip 15 1B.html">IPHONE 15</a>
+                <a href="ip14.html">IPHONE 14</a>
+                <a href="ip13.html">IPHONE 13</a>
+                <div
+                  class="nosptimkiem"
+                  id="noResultstimkiem"
+                  style="display: none"
+                >
+                  Không tìm thấy sản phẩm phù hợp.
+                </div>
+              </div>
+            </div>
+          </form>
+          <ul class="navbar-nav" style="float: left;">
+            <li class="nav-item" style="margin-left: -720px;">
+              <a class="kieuchuheader" href="Trang chủ.html"
+                ><img
+                  src="Images/home.svg"
+                  height="22px"
+                  style="margin-left: 20px;"
+                /><br />TRANG CHỦ</a
+              >
+            </li>
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="kieuchuheader" href="Lọc Iphone.html"
+                ><img
+                  style="margin-left: 10px"
+                  src="Images/apple.svg"
+                  height="22px"
+                /><br />IPHONE</a
+              >
+              <ul class="submenu">
+                <div class="col1">
+                  <li>
+                    <a href="Lọc Iphone.html">IPhone 15 Series</a>
+                    <!-- <ul class="col1">
+                  <li><a href="#">IPhone 15 ProMax</a></li>
+                  <li><a href="#">IPhone 15 Pro</a></li>
+                  <li><a href="#">IPhone 15 Plus</a></li>
+                  <li><a href="#">IPhone 15</a></li>
+                </ul>-->
+                  </li>
+                  <li><a href="ip14.html">IPhone 14 Series</a></li>
+                  <li><a href="ip13 256G.html">IPhone 13 Series</a></li>
+                  <li><a href="ip12.html">IPhone 12 Series</a></li>
+                  <li><a href="ip11 256G.html">IPhone 11 Series</a></li>
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="kieuchuheader" href="Lọc Ipad.html"
+                ><img
+                  src="Images/tablet.svg"
+                  height="22px"
+                  style="margin-left: 10px"
+                /><br />
+                &ensp;IPAD</a
+              >
+              <ul class="submenu">
+                <div class="col1">
+                  <li><a href="ipad2.html">Ipad Pro</a></li>
+                  <li><a href="ipad4.html">Ipad AIR</a></li>
+                  <li><a href="ipad5.html">Ipad Gen</a></li>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="kieuchuheader" href="Lọc Phukien.html">
+                <img
+                  src="Images/smartwatch.svg"
+                  height="22px"
+                  style="margin: 5px 28px auto"
+                /><br />PHỤ KIỆN
+              </a>
+            </li>
+            <li class="nav-item"  style="margin-left: 20px;">
+              <a
+                href="đăng kí đăng nhập.html"
+                class="kieuchuheader"
+                
+                ><img
+                  src="Images/person-circle.svg"
+                  height="22px"
+                  style="margin: 5px 38px auto"
+                /><br />ĐĂNG NHẬP</a
+              >
+            </li>
+            <li class="nav-item"  style="margin-left: 30px;"> <div class="dropdowncartgiohang">
+              <button onclick="myFunction()" class="dropbtncartgiohang" style="border: #f1f1f1;background-color: white;"><i class="fa-solid fa-cart-shopping"></i></button>
+              <div id="myDropdowncartgiohang" class="dropdown-contentcartgiohang">
+               <div id="cart">
+                <h2>Giỏ hàng của bạn</h2>
+                <ul id="cart-items"></ul>
+                <div id="cart-total">
+                  Tổng tiền: <span id="cart-total-price">0₫</span>
+                </div>
+                <button id="clear-cart-btn"><a href="Trang chủ.html">Xóa giỏ hàng</a></button>
+                <button class="thanhtoancart"><a href="ThanhToan.html">Thanh toán</a></button>
+              </div>
+              
+              </div></li>
+            <li class="nav-item"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section style="margin-top: 120px">
+  </section>
+  <!--hau-->
+  <div class="container-form">
+    <a href="Trang chủ.html" alt="Trang chủ">Trang chủ - </a><a href="Trang chủ.html">Trang chuyên mục - </a><a href="SuaChua.html">Sửa chữa iPhone</a></br>
+        <h2>CHÍNH SÁCH BẢO MẬT THÔNG TIN</h2>
+        <i><p>Ngày đăng: 16:21:00 19-04-2023</p></i></br>
+    <b>1. Mục đích và phạm vi thu thập thông tin</b></br>
+    Baotuyetmobile.vn không bán, chia sẻ hay trao đổi thông tin cá nhân của khách hàng thu thập trên trang web cho một bên thứ ba nào khác.</br>
+    Thông tin cá nhân thu thập được sẽ chỉ được sử dụng trong nội bộ công ty.</br>
+    Khi bạn liên hệ đăng ký dịch vụ, thông tin cá nhân mà Baotuyetmobile.vn thu thập bao gồm:</br>
+    Họ và tên</br>
+    Địa chỉ</br>
+    Điện thoại</br>
+    Email</br>
+    Ngoài thông tin cá nhân là các thông tin về dịch vụ</br>
+    Tên sản phẩm</br>
+    Số lượng </br>
+    Thời gian giao nhận sản phẩm</br>
+    </br></br>
+    <b>2. Phạm vi sử dụng thông tin</b></br>
+    Thông tin cá nhân thu thập được sẽ chỉ được Baotuyetmobile.vn sử dụng trong nội bộ công ty và cho một hoặc tất cả các mục đích sau đây:</br>
+    - Hỗ trợ khách hàng</br>
+    - Cung cấp thông tin liên quan đến dịch vụ</br>
+    - Xử lý đơn đặt hàng và cung cấp dịch vụ và thông tin qua trang web của chúng tôi theo yêu cầu của bạn</br>
+    - Chúng tôi có thể sẽ gửi thông tin sản phẩm, dịch vụ mới, thông tin về các sự kiện sắp tới hoặc thông tin tuyển dụng nếu quý khách đăng kí nhận email thông báo.</br>
+    - Ngoài ra, chúng tôi sẽ sử dụng thông tin bạn cung cấp để hỗ trợ quản lý tài khoản khách hàng; xác nhận và thực hiện các giao dịch tài chính liên quan đến các khoản thanh toán trực tuyến của bạn;</br>
+    </br></br>
+    <b>3. Thời gian lưu trữ thông tin</b></br>
+    Đối với thông tin cá nhân, Baotuyetmobile.vn chỉ xóa đi dữ liệu này nếu khách hàng có yêu cầu, khách hàng yêu cầu gửi mail về </br> Baotuyetmobile12345@gmail.com </br>
+    </br></br>
+    <b>4. Những người hoặc tổ chức có thể được tiếp cận với thông tin cá nhân</b></br>
+    Đối tượng được tiếp cận với thông tin cá nhân của khách hàng thuộc một trong những trường</br>
+    hợp sau:</br>
+    - CÔNG TY TNHH THƯƠNG MẠI QUỐC TẾ BẢO TUYẾT</br>
+    - Các đối tác có ký hợp động thực hiện 1 phần dịch vụ do CÔNG TY TNHH THƯƠNG MẠI QUỐC TẾ BẢO TUYẾT. Các đối tác này sẽ nhận được những thông tin theo thỏa thuận hợp đồng (có thể 1phần hoặc toàn bộ thông tin tuy theo điều khoản hợp đồng) để tiến hành hỗ trợ người dùng sử dụng dịch vụ do Công ty cung cấp.</br>
+    </br></br>
+    <b>5. Địa chỉ của đơn vị thu thập và quản lý thông tin cá nhân</b></br>
+    Công ty TNHH Thương Mại Quốc Tế Bảo Tuyết</br>
+    Địa chỉ: Tập thể xí nghiệp Sông Đà, X. Tân Triều, H. Thanh Trì, Tp. Hà Nội</br>
+    Điện thoại: 0937114666</br>
+    Website: Baotuyetmobile.vn</br>
+    Email: Baotuyetmobile12345@gmail.com </br></br></br>
+    
+    <b>6. Phương tiện và công cụ để người dùng tiếp cận và chỉnh sửa dữ liệu cá nhân của mình</b></br>
+     Baotuyetmobile.vn không thu thập thông tin khách hàng qua trang web, thông tin cá nhân khách hàng được thực hiện thu thập qua email liên hệ</br> đặt mua sản phẩm, dịch vụ gửi về hộp mail của chúng tôi: Baotuyetmobile12345@gmail.com hoặc số điện thoại liên hệ đặt mua sản phẩm gọi về</br> 0937114666 </br>
+    Bạn có thể liên hệ địa chỉ email cùng số điện thoại trên để yêu cầu Baotuyetmobile.vn chỉnh sửa dữ liệu cá nhân của mình.</br>
+    </br></br>
+    <b>7. Cơ chế tiếp nhận và giải quyết khiếu nại của người tiêu dùng liên quan đến việc thông tin cá nhân bị sử dụng sai mục đích hoặc phạm vi đã thông báo.</b></br>
+    Tại Baotuyetmobile.vn , việc bảo vệ thông tin cá nhân của bạn là rất quan trọng, bạn được đảm bảo rằng thông tin cung cấp cho chúng tôi sẽ được mật Baotuyetmobile.vn cam kết không chia sẻ, bán hoặc cho thuê thông tin cá nhân của bạn cho bất kỳ người nào khác. Baotuyetmobile.vn cam kết chỉ sử dụng các thông tin của bạn vào các trường hợp sau:</br>
+    - Nâng cao chất lượng dịch vụ dành cho khách hàng</br>
+    - Giải quyết các tranh chấp, khiếu nại</br>
+    - Khi cơ quan pháp luật có yêu cầu.</br>
+     Baotuyetmobile.vn hiểu rằng quyền lợi của bạn trong việc bảo vệ thông tin cá nhân cũng chính là trách nhiệm của chúng tôi nên trong bất kỳ trường hợp có thắc mắc, góp ý nào liên quan đến chính sách bảo mật của Baotuyetmobile.vn , và liên quan đến việc thông tin cá nhân bị sử dụng sai mục đích hoặc phạm vi đã thông báo vui lòng liên hệ qua số hotline 0937114666 hoặc email: Baotuyetmobile12345@gmail.com </br>
+     
+    </br></br></br>
+    <img src="Images/tags-fill.svg" alt="Tag">Tags:
+  
+<!-- footer------------------------------------------------------------------------------------------------------------>
+      <footer>
+        <div class="footer container-fluid" style="padding:0px;">
+          <div class="footer-top ">
+            <div class="row">
+              <div class="col-xl-4 col-lg-4 col-sm-4 margin-bottom-30">
+                <h4 class="footer-title-top">Giới thiệu</h4>
+                <div class="footer-content-top">
+                  <p><strong>Bảo Tuyết Mobile</strong></p>
+                  <p>Cửa hàng bán lẻ điện thoại di động, smartphone, iPad, laptop, phụ kiện chính hãng, giá tốt nhất. Kèm theo nhiều khuyến mãi hấp dẫn.</p>
+                  <p><strong>Hotline:</strong> <a href="">0984343469</a></p>
+                  <p><strong>Địa chỉ:</strong> 18 Tây Sơn, Quận Đống Đa, Hà Nội</p>
+                </div>
+              </div>
+      
+              <div class="col-xl-4 col-lg-4 col-sm-4 margin-bottom-30">
+                <h4 class="footer-title-top">Liên hệ</h4>
+                <div class="footer-content-top">
+                  <p><strong>Tư vấn bán hàng và hỗ trợ trả góp</strong> <b style="color:red;">0984.3434.69</b> <br>(8h00 - 22h00)</p>
+                  <span>-----------------------------------------------------------</span>
+                  <p><strong>Hỗ trợ kỹ thuật:</strong> 0915.92.6606 <br> (9h30-12h30; 14h-18h30)</p>
+                </div>
+              </div>
+      
+              <div class="col-xl-4 col-lg-4 col-sm-4 margin-bottom-30">
+                <h4 class="footer-title-top">Dịch vụ</h4>
+                <div class="footer-content-top">
+                  <div class="ratio ratio-16x9">
+                    <iframe style="border-radius: 10px;" width="560" height="315" src="https://www.youtube.com/embed/KQsPqwJxsi0?si=MWMkoh38pbshoB3N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="footer-bottom">
+            
+              <div class="row">
+                <div class="col-lg-3 p-2" >
+                  <h4 class="footer-title-bot" style="margin-top:0px;">Công Ty</h4>
+                  <div class="footer-content-bot">
+                    <span>Công ty TNHH Thương Mại Quốc Tế Bảo Tuyết</sp>
+                    <p>MST 0107755476 do Sở KH và ĐT TP Hà Nội cấp ngày 30/11/2022</p>
+                    <p>Địa chỉ: Tập thể xí nghiệp Sông Đà, X. Tân Triều, H. Thanh Trì, Tp. Hà Nội</p>
+                    <p>Hotline: <b style="color:red">0984343469</b></p>
+                    <span>Email: baotuyetmobile12345@gmail.com</span>
+                  </div>
+                </div>
+      
+                <div class="col-lg-3 p-2">
+                  <h4 class="footer-title-bot">Chính Sách Bán Hàng</h4>
+                  <ul class="footer-links" >
+                    <li><a href="BaoMatTT.html"><img src="Images/boltsl.svg">&nbsp;Chính sách bảo mật thông tin</a></li>
+                    <li><a href="XulyKNai.html"><img src="Images/boltsl.svg">&nbsp;Chính sách xử lý khiếu nại</a></li>
+                    <li><a href="KiemHang.html"><img src="Images/boltsl.svg">&nbsp;Chính sách kiểm hàng</a></li>
+                    <li><a href="VanChuyen.html"><img src="Images/boltsl.svg">&nbsp;Chính sách vận chuyển</a></li>
+                    <li><a href="DoiTra.html"><img src="Images/boltsl.svg">&nbsp;Chính sách đổi trả</a></li>
+                    <li><a href="ThanhToan.html"><img src="Images/boltsl.svg">&nbsp;Chính sách thanh toán</a></li>
+                  </ul>
+                </div>
+      
+                <div class="col-lg-3 p-2 ">
+                  <h4 class="footer-title-bot">Hướng Dẫn</h4>
+                  <ul class="footer-links">
+                    <li><a href="MuaHangTX.html"><img src="Images/boltsl.svg">&nbsp;Hướng dẫn mua hàng từ xa</a></li>
+                    <li><a href="DatHang.html"><img src="Images/boltsl.svg">&nbsp;Đặt hàng qua Facebook</a></li>
+                  </ul>
+                  <div class="payment">
+                    <h4 class="footer-titlex">Phương thức thanh toán</h4>
+                    <a href="ThanhToan.html"><img src="Images/thanhtoan.png" alt="Phương thức thanh toán" height="auto"></a>
+                  </div>
+                </div>
+      
+                <div class="col-lg-3 p-3 " style="margin-bottom:115px;">
+                  <h4 class="footer-title-bot">Giới thiệu</h4>
+                  <ul class="footer-links">
+                    <li><a href="GioiThieu.html"><img src="Images/boltsl.svg">&nbsp;Giới thiệu</a></li>
+                    <li><a href="#"><img src="Images/boltsl.svg">&nbsp;Sản phẩm</a></li>
+                    <li><a href="#"><img src="Images/boltsl.svg">&nbsp;Khuyến Mãi</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </footer>
+<script src="section.js"></script>
+</body>
+</html>

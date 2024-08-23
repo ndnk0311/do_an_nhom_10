@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảo Tuyết Mobile</title>
+    <link rel="icon" type="image/x-icon" href="ảnh/logotitle.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      canvas {
+        background-color: red; /* Đặt màu nền cho canvas */
+      }
+    </style>
+  </head>
+  <body style="max-width: 170px; max-height: 170px">
+    <canvas id="myCanvas"></canvas>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+
+      // Set kích thước canvas
+      canvas.width = 70; // Đặt kích thước canvas là 200px
+      canvas.height = 70; // Đặt kích thước canvas là 150px
+
+      // Thiết lập font chữ và kích thước
+      ctx.font = 'italic bold 60px "Brush Script MT", cursive'; // Đặt font và kích thước chữ
+      ctx.fillStyle = "white"; // Màu chữ đỏ
+      ctx.textAlign = "left"; // Canh văn bản ở phía trái
+      ctx.textBaseline = "top"; // Canh văn bản ở trên cùng
+      ctx.fillText("B", 15, 10); // Vị trí và kích thước chữ
+    });
+  </script>
+</html>

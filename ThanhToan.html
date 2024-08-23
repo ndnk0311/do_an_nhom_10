@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bảo Tuyết Mobile</title><link rel="icon" type="image/x-icon" href="ảnh/logotitle.svg">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Header hau.css'>
+    <link rel="stylesheet" href="section.css"/>
+     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <style>
+      .col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container-sm {
+  background-color: white;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  display:block;
+}
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+      .row1 {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 50px;
+}
+      {
+  box-sizing: border-box;
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+      /*Layout từng thiết bị---------------------------------------------------------------*/
+     @media (min-width: 992px) {
+  .col-xl-5ths {
+    width: 20%;
+    float: left;
+  }
+  }
+  @media (max-width: 992px) {
+  .col-lg-3 {
+    width: 25%;
+    float: left;
+  }
+  }
+  @media (max-width: 768px) {
+  .col-md-4 {
+    width: 50%;
+    float: left;
+  }
+  }
+  @media (max-width: 576px) {
+  .col-sm-6 {
+    width: 50%;
+    float: left;
+  }
+  }
+  @media (max-width: 320px) {
+  .col-6 {
+    width: 100%;
+    float: left;
+  }
+  }
+  /*Layout từng thiết bị---------------------------------------------------------------*/
+    </style>
+  </head>
+<body>
+  
+  <header>
+    <nav style="margin-top: -20px; background-color: #ffff;" class="navbar navbar-expand-xxl">
+      <div class="container">
+        <a  class="navbar-brand" href="Trang chủ.html"
+          ><img style="max-width: 150px;" src="ảnh/logo.baotuyet.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mynavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <form style="display: flex; margin-left: 10px;">
+            <div class="dropdowntimkiem">
+              <input style="width: 200px; margin-top: 20px;"
+                type="text"
+                placeholder="Nhập tên sản phẩm"
+                id="myInputtimkiem"
+                onkeyup="filterFunctiontimkiem()"
+              />
+              <button
+                onclick="myFunctiontimkiem()"
+                class="dropbtntimkiem"
+                onmouseout="hideDropdowntimkiem()"
+              >
+                <i class="fa fa-search"></i>
+              </button>
+
+              <div id="myDropdowntimkiem" class="dropdown-contenttimkiem">
+                <a href="Lọc Ipad.html"><span>IPAD</span></a>
+                <a href="Lọc Iphone.html">IPHONE</a>
+                <a href="Lọc Phukien.html">Củ sạc</a>
+                <a href="Lọc Phukien.html">Dây sạc</a>
+                <a href="Lọc Phukien.html">Tai nghe</a>
+                <a href="Lọc Iphone.html">Apple</a>
+                <a href="Lọc Phukien.html">Airpods</a>
+                <a href="ip 15 1B.html">IPHONE 15 PRO</a>
+                <a href="ip14.html">IPHONE 14 PRO</a>
+                <a href="ip13 256G.html">IPHONE 13 PRO</a>
+                <a href="ip 15 1B.html">IPHONE 15</a>
+                <a href="ip14.html">IPHONE 14</a>
+                <a href="ip13.html">IPHONE 13</a>
+                <div
+                  class="nosptimkiem"
+                  id="noResultstimkiem"
+                  style="display: none"
+                >
+                  Không tìm thấy sản phẩm phù hợp.
+                </div>
+              </div>
+            </div>
+          </form>
+          <ul class="navbar-nav" style="float: left;">
+            <li class="nav-item" style="margin-left: -720px;">
+              <a class="kieuchuheader" href="Trang chủ.html"
+                ><img
+                  src="Images/home.svg"
+                  height="22px"
+                  style="margin-left: 20px;"
+                /><br />TRANG CHỦ</a
+              >
+            </li>
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="kieuchuheader" href="Lọc Iphone.html"
+                ><img
+                  style="margin-left: 10px"
+                  src="Images/apple.svg"
+                  height="22px"
+                /><br />IPHONE</a
+              >
+              <ul class="submenu">
+                <div class="col1">
+                  <li>
+                    <a href="Lọc Iphone.html">IPhone 15 Series</a>
+                    <!-- <ul class="col1">
+                  <li><a href="#">IPhone 15 ProMax</a></li>
+                  <li><a href="#">IPhone 15 Pro</a></li>
+                  <li><a href="#">IPhone 15 Plus</a></li>
+                  <li><a href="#">IPhone 15</a></li>
+                </ul>-->
+                  </li>
+                  <li><a href="ip14.html">IPhone 14 Series</a></li>
+                  <li><a href="ip13 256G.html">IPhone 13 Series</a></li>
+                  <li><a href="ip12.html">IPhone 12 Series</a></li>
+                  <li><a href="ip11 256G.html">IPhone 11 Series</a></li>
+                </div>
+              </ul>
+            </li>
+
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="kieuchuheader" href="Lọc Ipad.html"
+                ><img
+                  src="Images/tablet.svg"
+                  height="22px"
+                  style="margin-left: 10px"
+                /><br />
+                &ensp;IPAD</a
+              >
+              <ul class="submenu">
+                <div class="col1">
+                  <li><a href="ipad2.html">Ipad Pro</a></li>
+                  <li><a href="ipad4.html">Ipad AIR</a></li>
+                  <li><a href="ipad5.html">Ipad Gen</a></li>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item" style="margin-left: 20px;">
+              <a class="kieuchuheader" href="Lọc Phukien.html">
+                <img
+                  src="Images/smartwatch.svg"
+                  height="22px"
+                  style="margin: 5px 28px auto"
+                /><br />PHỤ KIỆN
+              </a>
+            </li>
+            <li class="nav-item"  style="margin-left: 20px;">
+              <a
+                href="đăng kí đăng nhập.html"
+                class="kieuchuheader"
+
+               
+                ><img
+                  src="Images/person-circle.svg"
+                  height="22px"
+                  style="margin: 5px 38px auto"
+                /><br />ĐĂNG NHẬP</a
+              >
+            </li>
+            <li class="nav-item"  style="margin-left: 30px;"> <div class="dropdowncartgiohang">
+              <button onclick="myFunction()" class="dropbtncartgiohang" style="border: #f1f1f1;background-color: white;"><i class="fa-solid fa-cart-shopping"></i></button>
+              <div id="myDropdowncartgiohang" class="dropdown-contentcartgiohang">
+               <div id="cart">
+                <h2>Giỏ hàng của bạn</h2>
+                <ul id="cart-items"></ul>
+                <div id="cart-total">
+                  Tổng tiền: <span id="cart-total-price">0₫</span>
+                </div>
+                <button id="clear-cart-btn"><a href="Trang chủ.html">Xóa giỏ hàng</a></button>
+                <button class="thanhtoancart"><a href="ThanhToan.html">Thanh toán</a></button>
+              </div>
+              
+              </div></li>
+            <li class="nav-item"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section style="margin-top: 120px">
+  </section>
+  <!--hau-->
+  <div class="row row1" style="padding-top:10px;">
+    <div class="col-75">
+      <div class="container-sm ">
+        <form >
+          <div class="row">
+            <a href="Trang chủ.html"><img src="images/Logo.png" alt="Logo" style="justify-content: center; display:flex; align-items: center;" height="100"></a>
+            <div class="col-50">
+              
+              <h3 style="font-weight: bold;">Địa chỉ thanh toán</h3>
+              <label for="fname"><i class="fa fa-user"></i> Họ và Tên</label>
+              <input type="text" id="fname" name="hoten" placeholder="Nguyen Van A">
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" placeholder="john@example.com">
+              <label for="adr"><i class="fa fa-address-card-o"></i> Địa chỉ</label>
+              <input type="text" id="adr" name="diachi" placeholder="">
+              <label for="city"><i class="fa fa-institution"></i> Phone</label>
+              <input type="text" id="city" name="nghe" placeholder="">
+  
+             
+            </div>
+            
+            <div class="col-50" style="display:block;">
+              <h3 style="font-weight: bold;">PHƯƠNG THỨC THANH TOÁN</h3>
+              <label>
+                <input type="radio" name="payment-option" value="cash-on-delivery" checked="checked" onclick="showPaymentMethod()"> Thanh toán khi nhận hàng
+              </label>
+              <label>
+                <input type="radio" name="payment-option" value="online-payment" onclick="showPaymentMethod()"> Thanh toán online
+              </label>
+              <div id="payment-method" style="display: none;">
+              <h3>Thanh toán online</h3>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <label for="cname">Họ và Tên chủ thẻ</label>
+              <input type="text" id="cname" name="cardname" placeholder="Nguyen Van A">
+              <label for="ccnum">Mã số thẻ</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+              <label for="expmonth">Ngày hết hạn</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="">
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear">Năm phát hành</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="2018">
+                </div>
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="xxx">
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        
+        </form>
+        
+        <div class="container">
+          <div></div>
+          <form id="order-form" onsubmit="submitForm(event)">
+              <!-- Form fields -->
+      
+              <input type="submit" value="Đặt Hàng" class="btn">
+          </form>
+          <div id="success-message" style="display: none;">
+              <!-- Thông báo đặt hàng thành công -->
+              <h1 style="color: red; text-align: center;">Đặt hàng thành công!</h1>
+              <h3 style="text-align: center;"><p>Cảm ơn bạn đã đặt hàng.</p></h3>
+            <center>
+                <button style="background-color:red; border-radius: 5px; margin: 0 auto; border: 1px solid red;" onclick="continueShopping()"> <a href="Trang chủ.html" style="text-decoration: none;color:black; font-size: 30px;">Tiếp tục mua hàng</a></button>
+            </div>
+            </center>
+      </div>
+      </div>
+    </div>
+  </div>
+    
+    <div class="col-25">
+      <div class="container">
+        <h4>Giỏ hàng <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+        <p><a href="ip 15 1B.html" style="text-decoration: none; color: black;">IPHONE</a> <span class="price">15.000.000đ</span></p>
+        <p><a href="ipad3.html" style="text-decoration: none; color: black;">IPAD</a> <span class="price">18.999.000đ</span></p>
+        <p><a href="phukien5.html" style="text-decoration: none; color: black;">TAI NGHE</a> <span class="price">8.999.999đ</span></p>
+        <p><a href="phukien3.html" style="text-decoration: none; color: black;">DÂY SẠC</a> <span class="price">2.990.000đ</span></p>
+        <hr>
+        <p>TỔNG TIỀN: <span class="price" style="color:black"><b>9.999.999.999đ</b></span></p>
+      </div>
+    </div>
+  </div>
+ 
+ 
+
+
+
+
+      
+<!-- footer------------------------------------------------------------------------------------------------------------>
+      <footer>
+        <div class="footer container-fluid" style="padding:0px;">
+          <div class="footer-top ">
+            <div class="row">
+              <div class="col-xl-4 col-lg-4 col-sm-4 margin-bottom-30">
+                <h4 class="footer-title-top">Giới thiệu</h4>
+                <div class="footer-content-top">
+                  <p><strong>Bảo Tuyết Mobile</strong></p>
+                  <p>Cửa hàng bán lẻ điện thoại di động, smartphone, iPad, laptop, phụ kiện chính hãng, giá tốt nhất. Kèm theo nhiều khuyến mãi hấp dẫn.</p>
+                  <p><strong>Hotline:</strong> <a href="">0984343469</a></p>
+                  <p><strong>Địa chỉ:</strong> 18 Tây Sơn, Quận Đống Đa, Hà Nội</p>
+                </div>
+              </div>
+      
+              <div class="col-xl-4 col-lg-4 col-sm-4 margin-bottom-30">
+                <h4 class="footer-title-top">Liên hệ</h4>
+                <div class="footer-content-top">
+                  <p><strong>Tư vấn bán hàng và hỗ trợ trả góp</strong> <b style="color:red;">0984.3434.69</b> <br>(8h00 - 22h00)</p>
+                  <span>-----------------------------------------------------------</span>
+                  <p><strong>Hỗ trợ kỹ thuật:</strong> 0915.92.6606 <br> (9h30-12h30; 14h-18h30)</p>
+                </div>
+              </div>
+      
+              <div class="col-xl-4 col-lg-4 col-sm-4 margin-bottom-30">
+                <h4 class="footer-title-top">Dịch vụ</h4>
+                <div class="footer-content-top">
+                  <div class="ratio ratio-16x9">
+                    <iframe style="border-radius: 10px;" width="560" height="315" src="https://www.youtube.com/embed/KQsPqwJxsi0?si=MWMkoh38pbshoB3N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="footer-bottom">
+            
+              <div class="row">
+                <div class="col-lg-3 p-2" >
+                  <h4 class="footer-title-bot" style="margin-top:0px;">Công Ty</h4>
+                  <div class="footer-content-bot">
+                    <span>Công ty TNHH Thương Mại Quốc Tế Bảo Tuyết</sp>
+                    <p>MST 0107755476 do Sở KH và ĐT TP Hà Nội cấp ngày 30/11/2022</p>
+                    <p>Địa chỉ: Tập thể xí nghiệp Sông Đà, X. Tân Triều, H. Thanh Trì, Tp. Hà Nội</p>
+                    <p>Hotline: <b style="color:red">0984343469</b></p>
+                    <span>Email: baotuyetmobile12345@gmail.com</span>
+                  </div>
+                </div>
+      
+                <div class="col-lg-3 p-2">
+                  <h4 class="footer-title-bot">Chính Sách Bán Hàng</h4>
+                  <ul class="footer-links" >
+                    <li><a href="BaoMatTT.html"><img src="Images/boltsl.svg">&nbsp;Chính sách bảo mật thông tin</a></li>
+                    <li><a href="XulyKNai.html"><img src="Images/boltsl.svg">&nbsp;Chính sách xử lý khiếu nại</a></li>
+                    <li><a href="KiemHang.html"><img src="Images/boltsl.svg">&nbsp;Chính sách kiểm hàng</a></li>
+                    <li><a href="VanChuyen.html"><img src="Images/boltsl.svg">&nbsp;Chính sách vận chuyển</a></li>
+                    <li><a href="DoiTra.html"><img src="Images/boltsl.svg">&nbsp;Chính sách đổi trả</a></li>
+                    <li><a href="ThanhToan.html"><img src="Images/boltsl.svg">&nbsp;Chính sách thanh toán</a></li>
+                  </ul>
+                </div>
+      
+                <div class="col-lg-3 p-2 ">
+                  <h4 class="footer-title-bot">Hướng Dẫn</h4>
+                  <ul class="footer-links">
+                    <li><a href="MuaHangTX.html"><img src="Images/boltsl.svg">&nbsp;Hướng dẫn mua hàng từ xa</a></li>
+                    <li><a href="DatHang.html"><img src="Images/boltsl.svg">&nbsp;Đặt hàng qua Facebook</a></li>
+                  </ul>
+                  <div class="payment">
+                    <h4 class="footer-titlex">Phương thức thanh toán</h4>
+                    <a href="ThanhToan.html"><img src="Images/thanhtoan.png" alt="Phương thức thanh toán" height="auto"></a>
+                  </div>
+                </div>
+      
+                <div class="col-lg-3 p-3 " style="margin-bottom:115px;">
+                  <h4 class="footer-title-bot">Giới thiệu</h4>
+                  <ul class="footer-links">
+                    <li><a href="GioiThieu.html"><img src="Images/boltsl.svg">&nbsp;Giới thiệu</a></li>
+                    <li><a href="#"><img src="Images/boltsl.svg">&nbsp;Sản phẩm</a></li>
+                    <li><a href="#"><img src="Images/boltsl.svg">&nbsp;Khuyến Mãi</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </footer>
+<script src="section.js"></script>
+<script>
+  function showPaymentMethod() {
+    var onlinePaymentRadio = document.querySelector('input[name="payment-option"][value="online-payment"]');
+    var paymentMethodDiv = document.getElementById('payment-method');
+
+    if (onlinePaymentRadio.checked) {
+      paymentMethodDiv.style.display = 'block';
+    } else {
+      paymentMethodDiv.style.display = 'none';
+    }
+  }
+
+  function submitForm(event) {
+        event.preventDefault(); // Ngăn chặn form gửi đi
+
+        // Xử lý logic đặt hàng ở đây (có thể gửi request đến máy chủ)
+
+        // Hiển thị thông báo đặt hàng thành công
+        var successMessage = document.getElementById("success-message");
+        successMessage.style.display = "block";
+
+        // Cuộn đến phần thông báo đặt hàng thành công
+        successMessage.scrollIntoView({ behavior: "smooth" });
+        function continueShopping() {
+    // Chuyển hướng người dùng đến trang chủ
+    window.location.href = "Trang chủ.html"; // Thay "Trangchu.html" bằng URL của trang chủ của bạn
+}
+    }
+
+   
+function submitForm(event) {
+  event.preventDefault(); // Ngăn chặn form gửi đi
+
+  // Lấy dữ liệu từ các trường nhập liệu
+  var hoten = document.getElementById("fname").value;
+  var email = document.getElementById("email").value;
+  var diachi = document.getElementById("adr").value;
+  var nghe = document.getElementById("city").value;
+
+  // Kiểm tra xem có trường nào chưa được điền không
+  if (hoten === "" || email === "" || diachi === "" || nghe === "") {
+    alert("Vui lòng điền đầy đủ thông tin.");
+    return; // Dừng hàm nếu có trường chưa được điền
+  }
+
+  // Hiển thị thông tin đơn hàng (nếu cần)
+  console.log("Thông tin đơn hàng:");
+  console.log("Họ và tên:", hoten);
+  console.log("Email:", email);
+  console.log("Địa chỉ:", diachi);
+  console.log("Nghề nghiệp:", nghe);
+
+  // Xử lý logic đặt hàng ở đây (có thể gửi request đến máy chủ)
+
+  // Hiển thị thông báo đặt hàng thành công
+  var successMessage = document.getElementById("success-message");
+  successMessage.style.display = "block";
+
+  // Cuộn đến phần thông báo đặt hàng thành công
+  successMessage.scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+
+
+</body>
+</html>
